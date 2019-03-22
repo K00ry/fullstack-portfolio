@@ -1,0 +1,350 @@
+#home-wrap {
+  @include flex-display(flex, column, space-between, 100%, center);
+  //position: fixed;
+  margin: auto;
+  top: 30%;
+  @-moz-document url-prefix() {
+    position: sticky;
+  }
+  @include media(landscape) {
+    margin: auto;
+  }
+
+  h1 {
+    text-align: center;
+    @include font-fam-size(2.6em, $main-font-2, bold, #333333);
+    @include media(landscape) {
+    }
+    @include media(tablet) {
+      font-size: 3.5em;
+    }
+  }
+  p {
+    @include font-fam-size(1.4em, $main-font-2, bold, #333333);
+    border-radius: 50%;
+    @include media(tablet) {
+      font-size: 2em;
+    }
+  }
+}
+
+#projects {
+  @include flex-display(flex, column, space-between, 100%, center);
+  @include media(tablet) {
+    width: 100%;
+    padding-top: 20px;
+
+  }
+  @include media(laptop) {
+    padding-top: 0;
+    width: 90%;
+  }
+  @include media(desktop) {
+    width: 80%;
+  }
+  @include media(landscape) {
+    margin: auto;
+  }
+
+  .port-head {
+    opacity: 0;
+    @include font-fam-size(3em, $main-font-5, bold, #333333);
+
+    position: relative;
+    margin: 8px auto;
+    @include media(landscape) {
+      display: none;
+    }
+    @include media(tablet) {
+      opacity: 0;
+      top: 0;
+    }
+    @include media(laptop) {
+      margin: 20px auto;
+    }
+    @include media(desktop) {
+      margin: 20px auto;
+    }
+  }
+  .works {
+    @include flex-display(flex, column, space-between, auto, center);
+    padding: 10px 0;
+    img {
+      height: 120px;
+      width: 120px;
+      border-radius: 20px;
+    }
+  }
+}
+
+#mobile-portfolio {
+  //opacity: 0;
+  @include flex-display(flex, column, space-around, 100%, center);
+  @include media(landscape) {
+    //height: 100vh;
+    @include flex-display(flex, row, space-evenly, 100%, center);
+    flex-wrap: wrap;
+  }
+  @include media(tablet) {
+    @include flex-display(flex, row, space-around, 98%, center);
+    margin: 1em auto;
+  }
+  @include media(laptop) {
+
+  }
+  .last {
+    margin-left: 200px;
+  }
+  .work-mobile {
+    z-index: 2;
+    @include flex-display(flex, row-reverse, center, 100%, center);
+
+    margin: 1em auto;
+
+    @include media(landscape) {
+      @include flex-display(flex, column, space-around, 20%, center);
+      width: 33%;
+    }
+    @include media(tablet) {
+      opacity: 1;
+      flex-direction: column;
+      width: 20%;
+      margin: 0;
+    }
+    .img-border {
+      width: 50%;
+      @include media(landscape) {
+        width: 80%;
+      }
+
+      @include media(tablet) {
+        width: auto;
+
+        border-radius: 10%;
+        cursor: pointer;
+        transition: all 0.7s;
+        margin: 8px 0;
+        //box-shadow: 0 0 0 5px hsl(0, 0%, 70%), 0 0 0 10px hsl(0, 0%, 80%),
+        //  0 0 0 15px hsl(0, 0%, 90%);
+
+        &:hover {
+          //box-shadow: 0 0 0 10px hsl(15, 76%, 70%), 0 0 0 20px hsl(30, 76%, 70%);
+        }
+
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        @include media(tablet) {
+          //border-radius: 50%;
+          max-width: 100%;
+          width: 100px;
+          height: auto;
+        }
+
+        @include media(laptop) {
+
+          width: 120px;
+
+        }
+      }
+    }
+    .active {
+      @include media(tablet) {
+        background-color: hsl(15, 76%, 70%);
+            box-shadow: 0 0 0 5px hsl(15, 76%, 70%), 0 0 0 10px hsl(30, 76%, 70%),
+          0 0 0 15px hsl(44, 76%, 70%);
+      }
+    }
+    .caption {
+      @include font-fam-size(1.2em, $main-font-2, bolder, #383838);
+      width: 33%;
+      margin: auto 0;
+      padding-left: 1.6em;
+      cursor: pointer;
+      @include media(landscape) {
+        margin: 10px 0;
+        text-align: center;
+        padding: 0;
+        width: 60%;
+        font-size: 1em;
+      }
+      @include media(tablet) {
+        font-size: 1em;
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+        margin: .6em 0 0 0;
+      }
+      @include media(desktop) {
+      font-size: 1.4em;
+
+      }
+    }
+  }
+}
+
+.about-main {
+  transition: all 0.5s;
+  @include flex-display(flex, column, space-between, 100%, center);
+  margin: auto;
+  //margin-bottom: 15%;
+  @include media(tablet) {
+    padding: 1em;
+    width: 80%;
+  }
+  @include media(laptop) {
+    width: 70%;
+    background-color: #fff;
+
+    //margin-bottom: 7em;
+  }
+  @include media(4k) {
+    width: 70%;
+    background-color: #fff;
+    height: 40vh;
+    margin: auto;
+  }
+  @include media(landscape) {
+    margin-bottom: 0;
+  }
+  .port-head-2-container {
+    @include media(tablet) {
+      margin: 1em;
+    }
+
+    .port-head-2 {
+      @include font-fam-size(1.5em, $main-font-2, bold, #333333);
+      margin: .5em auto;
+      @include media(tablet) {
+        font-size: 2em;
+      }
+      @include media(laptop) {
+        font-size: 3em;
+      }
+    }
+  }
+
+  .about-me-info {
+    p {
+      padding: 5px 10px;
+      @include font-fam-size(1.2em, $main-font-2, 400, $about-text);
+
+      text-align: center;
+      margin: 0.5em 0;
+      @include media(tablet) {
+        @include font-fam-size(1.6em, $main-font-3, 400, $about-text);
+        margin: auto;
+
+        width: 100%;
+      }
+      @include media(laptop) {
+        width: 80%;
+        font-size: 1.4em;
+        font-weight: 600;
+      }
+      @include media(desktop) {
+        @include font-fam-size(1.6em, $main-font-3, 400, $about-text);
+        padding: 15px 10px;
+
+      }
+    }
+  }
+
+  .skills-main {
+    @include flex-display(flex, column, space-around, 100%, center);
+    @include media(tablet) {
+      padding-bottom: 1em;
+
+    }
+
+    .skills-icons {
+      svg{
+        width: 40px;
+        height: 40px;
+        margin:  .3em;
+      }
+      //opacity: 0;
+      transition: all 0.5s;
+      @include flex-display(flex, row, space-around, 80%, center);
+
+      flex-wrap: wrap;
+      @include media(tablet) {
+        //width: 70%;
+        svg{
+          width: 60px;
+          height: 60px;
+          margin:  .3em;
+        }
+      }
+
+      @include media(laptop) {
+        svg{
+          width: 80px;
+          height: 80px;
+          margin:  .3em;
+        }
+      }
+      .logo-skill {
+        max-width: 100%;
+        height: auto;
+        width: 30px;
+        margin: 6px;
+        @include media(tablet) {
+          width: 40px;
+        }
+
+        @include media(laptop) {
+          width: 50px;
+          margin: 0.7em;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  @include flex-display(flex, column, space-around, 100%, center);
+  // padding :10px;
+  @include media(laptop) {
+    //opacity: 0;
+  }
+  h3 {
+
+    @include media(landscape) {
+      font-size: 1.5em;
+    }
+    @include font-fam-size(1.7em, $main-font-2, 200, #333333);
+    @include media(tablet) {
+      font-size: 2.5em;
+    }
+  }
+  .number-email {
+    @include flex-display(flex, row, space-around, 100%, center);
+
+    @include media(tablet) {
+      justify-content: space-between;
+
+      margin: 10px auto;
+      font-size: 1.3em;
+    }
+    @include media(laptop) {
+      width: 80%;
+
+
+
+    }
+    @include media(desktop) {
+      font-size: 1.8em;
+      width: 60%;
+    }
+    a {
+      @include font-fam-size(.8em, $main-font, 200, #919191);
+      //text-decoration: underline;
+      @include media(tablet) {
+        color: #616161;
+        font-size: 1.4em;
+      }
+    }
+  }
+}

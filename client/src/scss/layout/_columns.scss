@@ -1,0 +1,51 @@
+.home {
+  @include flex-display(flex, column, space-between, 100%, center);
+  height: 100vh;
+  @include media(tablet) {
+    height: 100vh;
+    background: none;
+  }
+}
+
+.portfolio {
+  @include flex-display(flex, column, space-between, 100%, center);
+
+
+
+  @include media(landscape) {
+    height: 100vh;
+  }
+  @include media(tablet) {
+    height: 100vh;
+
+  }
+  @include media(laptop) {
+    margin-bottom: 10em;
+    height: auto;
+  }
+
+}
+
+.about {
+  @include flex-display(flex, column, space-between, 100%, center);
+
+  margin-bottom: 4em;
+  @include media(landscape) {
+    height: auto;
+  }
+  @include media(tablet) {
+    height: 90vh;
+    //margin-bottom: 6em;
+  }
+  @include media(laptop) {
+    height: auto;
+    margin-bottom: 10vh;
+  }
+
+
+
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    height: auto;
+  }
+}

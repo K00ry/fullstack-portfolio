@@ -1,4 +1,348 @@
+///////// scroll trigger\\\\\\\\\\\
+
+.invisible {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.visible {
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+//bootsrtap corrections
+
+.panel {
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+.nav > li > a:hover {
+  background-color: inherit;
+  cursor: pointer;
+}
+.nav > li > a:focus {
+  background-color: inherit;
+}
+
+////////////////////////////BASE\\\\\\\\\\\\\\\\\\\\\\\\\\\
+body {
+  position: relative;
+  //background-image: url('../img/work/background/back.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include media(laptop) {
+    background-image: none;
+  }
+}
+.navbar{
+
+  display: flex;
+  @include media(tablet) {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+  }
+}
+
+.nav {
+  //background-color: #000;
+  @include flex-display(flex, row, space-around, 100%, center);
+  @include media(tablet) {
+    //padding-top: 10px;
+  }
+  @include media(laptop) {
+    justify-content: flex-start;
+  }
+}
+
+.navbar-nav {
 
 
 
+  margin: 0;
 
+
+
+}
+
+
+.nav-item a {
+  outline: none;
+  transition: all 0.5s;
+  @include font-fam-size(1.3em, $main-font-2, bold, #fff);
+  opacity: 0.8;
+  @include media(tablet) {
+    font-size: 2em;
+  }
+  @include media(laptop) {
+    font-size: 2.5em;
+  }
+  @include media(desktop) {
+
+    font-weight: bolder;
+    margin: 10px;
+  }
+}
+
+.active-me a {
+  color: #e7724b;
+  opacity: 1;
+
+
+
+}
+
+.active-intro {
+  background-color: hsl(15, 76%, 60%);
+  box-shadow: 0 0 0 15px hsl(15, 76%, 70%), 0 0 0 30px hsl(30, 76%, 70%),
+    0 0 0 45px hsl(44, 76%, 70%);
+  transition: all 0.5s;
+}
+
+.overlay-contentscale.open {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+.overlay-contentscale {
+  visibility: hidden;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.5s, visibility 0s 0.5s;
+  transition: transform 0.5s, visibility 0s 0.5s;
+}
+
+.modal-content {
+  @include flex-display(flex, column, flex-start, 100%, center);
+
+  background: $hard-blue-l;
+  @include media(landscape) {
+    z-index: 1060;
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  @include media(tablet) {
+    display: none;
+  }
+  h1 {
+    width: 100%;
+    background-color: #000000;
+    @include font-fam-size(2em, $main-font-3, bold, #ebebeb);
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+    @include media(landscape) {
+      font-size: 1.8em;
+      padding: 0.3em 0;
+    }
+  }
+  .lay-img {
+    @include flex-display(flex, column, flex-start, 100%, center);
+    height: auto;
+    padding: 10px 0;
+    margin: auto;
+    @include media(landscape) {
+      padding: 0;
+    }
+    ul {
+      @include flex-display(flex, row, space-around, 80%, center);
+      flex-wrap: wrap;
+      @include font-fam-size(0.7em, $main-font-3, bold, #ebebeb);
+      padding: 5px;
+      @include media(landscape) {
+        width: 40%;
+        padding: 0.2em;
+      }
+      .tech-title {
+        width: 15%;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+.img-and-caption {
+  @include flex-display(flex, column, space-around, 100%, center);
+  @include media(landscape) {
+    padding: 5px 5px;
+  }
+  img {
+    background-color: #cccccc;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 0 10px 0;
+    @include media(landscape) {
+      width: 44%;
+      padding: 0.4em 0.4em;
+    }
+  }
+  p {
+    @include font-fam-size(1.1em, $main-font-2, 600, #000);
+    width: 90%;
+    text-align: center;
+    //font-size: 0.7em;
+    padding: 10px 0 10px 0;
+    @include media(landscape) {
+      width: 100%;
+      padding: 0.4em;
+      margin: 0;
+
+      font-size: 0.9em;
+    }
+  }
+}
+
+#overlay-desktop {
+  display: none;
+  @include media(tablet) {
+    //opacity: 0;
+    @include flex-display(flex, column, flex-start, 90%, center);
+    .img-holder {
+      @include flex-display(flex, column, flex-start, 100%, center);
+      margin: 10px auto;
+      img {
+        width: 100%;
+        @include media(tablet) {
+          width: 100%;
+        }
+
+        @include media(laptop) {
+          width: 85%;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      @include media(laptop) {
+        max-width: 100%;
+      }
+      @include media(desktop) {
+
+      }
+    }
+  }
+  .info-ov {
+    @include font-fam-size(1.2em, $main-font-3, 200, #616161);
+    margin: 10px 0;
+    text-align: center;
+    @include media(tablet) {
+      font-size: 1.6em;
+      font-weight: 400;
+    }
+
+    @include media(laptop) {
+      width: 100%;
+      font-size: 1.4em;
+    }
+    @include media(desktop) {
+      font-size: 1.6em;
+      font-weight: 800;
+      width: 100%;
+    }
+  }
+  .title-tech-ov {
+    @include flex-display(flex, row, space-around, 100%);
+
+    .title-ov {
+      @include font-fam-size(2em, $main-font-5, bold, #333333);
+      @include media(tablet) {
+        @include font-fam-size(1.4em, $main-font-2, bolder, #333333);
+        text-align: left;
+        margin: 0px;
+        line-height: 4;
+      }
+      @include media(laptop) {
+        @include font-fam-size(1.7em, $main-font-2, bold, #333333);
+        line-height: 2;
+      }
+      @include media(desktop) {
+        @include font-fam-size(2.5em, $main-font-2, bolder, #333333);
+      }
+    }
+    .tech-ov {
+      @include flex-display(flex, row, space-evenly, 40%, center);
+
+      @include media(laptop) {
+      }
+    }
+    .tech-title {
+      width: 15%;
+      //margin: 0 6px;
+      img {
+        max-width: 100%;
+        height: auto;
+
+        @include media(laptop) {
+        }
+      }
+    }
+  }
+  @include media(laptop) {
+    width: 80%;
+  }
+}
+
+///* BACKGROUND VIDEO STYLES *\\\\
+
+.backGroundVid {
+  opacity: 0.1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.backGroundVid__video {
+  height: 100vh;
+  @include media(tablet) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+}
+@media (min-aspect-ratio: 16/9) {
+  @include media(tablet) {
+
+
+  .backGroundVid__video {
+    height: 300%;
+    top: -100%;
+    }
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  @include media(tablet) {
+    .backGroundVid__video {
+      width: 300%;
+      left: -100%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  //.backGroundVid {
+  //  display: none;
+  //}
+  //
+  //.backGroundVid__video {
+  //  display: none;
+  //}
+}

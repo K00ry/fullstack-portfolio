@@ -8,47 +8,38 @@ $nav-li-color		   : #BFBFBF;
 $head-color			   : #43495C;
 $shadow		    	   : #FFBD4F;
 $border-color		   : 2px dotted rgba(0, 0, 0, 0.1);
-$test-color: #fff;
+$about-text             : #4b4b4b;
 
 
 // added colors
-$text-yellow-main : #fdc53f;
-$light-grey	  : #999999;
-$hard-gray	  : #666666;
+
+$light-blue	  : #CCCCCC;
+$hard-blue	  : #5F74CF;
 $button-color : #D3D1FF;
 $dark-purple  : #7000CE;
 $body-text    : #E7F0E2;
-$highlight	  : #fcc646;
-$white      : #FFF;
-$white2     : #f6f6f6;
-$newColor :#274046;
-$text-dark :#46454a;
+$highlight	  : #EBB301;
+$grey	  : #f0f0ef;
 
-$background-White: #e6e7e9;
-$active-color :#CC6600;
-$test-color: #283441;
-
-  // lightend colors \\
+// lightend colors \\
+$text-black-l	  		   : rgba($text-black,.5);
 $text-black-m	  		   : rgba($text-black,.9);
-$text-gray-m	  		   : rgba($text-black,.7);
-$light-gray-l			   : rgba($light-grey,.9);
-$hard-gray-l			   : rgba($hard-gray,.9);
-$text-yellow-main-l         : rgba($text-yellow-main,.9);
-
-$dark-purple-l			   : rgba($dark-purple,.1);
+$hard-blue-l			   : rgba($light-blue,.9);
+$dark-purple-l			   : rgba($dark-purple,.2);
 $dark-purple-m			   : rgba($dark-purple,.6);
-$newColor-l			   : rgba($newColor,.6);
 $text-color			   : rgba($text-black,.7);
 $link-color-light	   : rgba($link-color,.6);
 $h-color			   : rgba($head-color,.8);
-$w-color                : rgba($white ,.9);
-
 
 
 // font variables \\
 
-$main-font-1 : 'Roboto', sans-serif;
-$main-font-2:  'Oswald', sans-serif;
+$main-font  : 'Dosis', sans-serif;
+$main-font-2 :'Oswald', sans-serif;
+$main-font-3: 'Roboto Condensed', sans-serif;
+
+$main-font-5: 'Six Caps', sans-serif;
+
 
 
 $sm-font    : 1em;
@@ -66,22 +57,15 @@ $auto    :  auto;
 $full    :  100%;
 $trans-default:all 1s;
 
-
-
 // variables for media queries \\
 
 $brk-xs	   : 320px;
 $brk-s	   : 375px;
-$brk-iphone-5 : 350px;
-$brk-iphone-plus : 400px;
-$brk-landscape : 480px;
+$brk-landscape : 414px;
 $brk-mobile-l  : 425px;
-// According to React-bootstrap
 $brk-tablet    : 768px;
-$brk-laptop    : 992px;
-$brk-desktop  : 1200px;
-
-/////
+$brk-laptop    : 1024px; 
+$brk-laptop-l  : 1440px;
 $brk-4k  	   : 2522px;
 $brk-height	   : 900px;
 

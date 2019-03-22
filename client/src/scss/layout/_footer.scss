@@ -1,0 +1,61 @@
+footer {
+    @include flex-display(flex, column, space-around, 100%, center);
+
+    span{
+        @include font-fam-size(.5em, $main-font, bold, #FFFFFF);
+         @include media(tablet) {
+            font-size: .9em;
+        }
+    }
+    // height: 10vh;
+    background-color: #000;
+
+    
+    @include media(landscape) {
+        height: 40px;
+       
+    }
+     
+    @include media(laptop) {
+        height: initial;
+        }
+}
+
+.social {
+    @include flex-display(flex, row, space-around, 50%, center);
+    padding-top: 5px;
+    @include media(laptop) {
+        width: 30%;
+    }
+    margin: 10px;
+    .social-icon {
+        margin: auto;
+        transition: all .3s;
+        width: 30px;
+        height: 30px;
+        //fill:#fff;
+        &:hover {
+            svg{
+                color: #e7724b;
+            }
+
+            opacity: 0.7;
+        }
+        @include media(landscape) {
+            width: 20px;
+            height: 20px;
+        }
+        @include media(tablet) {
+            width: 40px;
+            height: 40px;
+        }
+        //@include media(desktop) {
+        //    width: 80px;
+        //    height: 80px;
+        //}
+    }
+}
+
+//#facebook{
+//    fill: #FFFFFF;
+//}
