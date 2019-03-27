@@ -266,7 +266,7 @@
       }
       //opacity: 0;
       transition: all 0.5s;
-      @include flex-display(flex, row, space-around, 80%, center);
+      @include flex-display(flex, row, center, 80%, center);
 
       flex-wrap: wrap;
       @include media(tablet) {

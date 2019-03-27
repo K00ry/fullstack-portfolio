@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 // import axios from 'axios';
-// import ScrollTrigger from 'scrolltrigger-classes';
+import ScrollTrigger from 'scrolltrigger-classes';
 // import Sizes from 'react-sizes';
 
 import Portfolio from "./components/portfolio/portfolio";
@@ -18,11 +18,9 @@ class App extends Component {
   };
 
   componentDidMount() {
-      // document.addEventListener('DOMContentLoaded', function(){
-      //     new ScrollTrigger({
-      //         // centerVertical: true,
-      //     });
-      // });
+      document.addEventListener('DOMContentLoaded', function(){
+          new ScrollTrigger();
+      });
 
 
     // axios.post('/').then(response=>{

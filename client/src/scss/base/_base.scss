@@ -1,3 +1,6 @@
+
+
+
 ///////// scroll trigger\\\\\\\\\\\
 
 .invisible {
@@ -18,13 +21,13 @@
   margin-bottom: 0;
 }
 
-.nav > li > a:hover {
-  background-color: inherit;
-  cursor: pointer;
-}
-.nav > li > a:focus {
-  background-color: inherit;
-}
+//.nav > li > a:hover {
+//  background-color: inherit;
+//  cursor: pointer;
+//}
+//.nav > li > a:focus {
+//  background-color: inherit;
+//}
 
 ////////////////////////////BASE\\\\\\\\\\\\\\\\\\\\\\\\\\\
 body {
@@ -41,8 +44,8 @@ body {
 
   display: flex;
   @include media(tablet) {
-    padding-top: 1em;
-    padding-bottom: 1em;
+    //padding-top: 1em;
+    //padding-bottom: 1em;
 
   }
 }
@@ -69,15 +72,25 @@ body {
 }
 
 
-.nav-item a {
+.nav-li--a {
   outline: none;
   transition: all 0.5s;
+  &:hover{
+    color: #fff;
+    text-decoration: none;
+    @include media(laptop) {
+
+    }
+
+  }
   @include font-fam-size(1.3em, $main-font-2, bold, #fff);
   opacity: 0.8;
   @include media(tablet) {
     font-size: 2em;
   }
   @include media(laptop) {
+
+  margin: 0 .5em;
     font-size: 2.5em;
   }
   @include media(desktop) {
@@ -87,7 +100,7 @@ body {
   }
 }
 
-.active-me a {
+.active-me .nav-li--a {
   color: #e7724b;
   opacity: 1;
 

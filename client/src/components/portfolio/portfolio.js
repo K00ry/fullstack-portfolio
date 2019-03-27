@@ -70,8 +70,8 @@ class Portfolio extends Component {
         />;
         let isDesktop = <WorksDesktop works={this.state.works} />;
         return (
-            <section id="section-2" className="portfolio panel second container" >
-            <div id="projects" data-scroll="toggle(.scaleDownIn, .scaleDownOut)">
+            <section id="section-2" className="portfolio panel second .container-fluid" data-scroll="centerVertical,toggle(.scaleDownIn, .scaleDownOut)">
+            <div id="projects" >
                 <h1 className="port-head">Work</h1>
                 <Works data={worksDataMobile}
                        handleClick={this.getArray}
