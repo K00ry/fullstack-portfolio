@@ -3,6 +3,7 @@ import './App.css';
 // import axios from 'axios';
 import ScrollTrigger from 'scrolltrigger-classes';
 // import Sizes from 'react-sizes';
+// import ScrollTrigger from "react-scroll-trigger";
 
 import Portfolio from "./components/portfolio/portfolio";
 import Footer from "./components/footer";
@@ -13,25 +14,46 @@ import BackgroundVideo from "./components/BackgroundVideo";
 class App extends Component {
   state ={
     greet:'',
-    note:''
+    note:'',
+      visible: false
 
   };
 
   componentDidMount() {
-      document.addEventListener('DOMContentLoaded', function(){
-          new ScrollTrigger();
+      document.addEventListener('DOMContentLoaded', function () {
+          new ScrollTrigger({
+
+              // offset: {
+              //     x: 0,
+              //     y: 20
+              // },
+              // addHeight: true,
+              // once: true
+          }, document.body, window);
       });
 
 
-    // axios.post('/').then(response=>{
-    //   console.log(response);
-    //   const{greet,note}= response.data;
-    //   this.setState({
-    //     greet,
-    //     note
-    //   })
-    // })
+      // axios.post('/').then(response=>{
+      //   console.log(response);
+      //   const{greet,note}= response.data;
+      //   this.setState({
+      //     greet,
+      //     note
+      //   })
+      // })
   }
+
+    // onEnterViewport = () => {
+    //     this.setState({
+    //         visible: true
+    //     });
+    // };
+    //
+    // onExitViewport = () => {
+    //     this.setState({
+    //         visible: false
+    //     });
+    // };
 
 
   render() {
@@ -49,7 +71,9 @@ class App extends Component {
         <main id="main-of-main">
           <Navigation/>
           <Home/>
-          <Portfolio/>
+
+          <Portfolio />
+
           <About/>
         </main>
         <Footer/>

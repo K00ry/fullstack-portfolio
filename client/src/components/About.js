@@ -48,7 +48,7 @@ class About extends Component {
 
         return (
             <section id="section-3" className="about panel third"
-                     data-scroll="toggle(.fromTopIn, .fromTopOut)"
+                     data-scroll="toggle(.fromTopIn, .fromTopOut) offset(0,200)"
             >
                 <div className="about-main " >
                     <div className="about-me-info">

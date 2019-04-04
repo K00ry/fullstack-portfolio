@@ -20,14 +20,11 @@
   box-shadow: none;
   margin-bottom: 0;
 }
-
-//.nav > li > a:hover {
-//  background-color: inherit;
-//  cursor: pointer;
-//}
-//.nav > li > a:focus {
-//  background-color: inherit;
-//}
+///added Futura font
+@font-face {
+  font-family: Futura;
+  src: url(./fonts/FuturaPTBook.otf);
+}
 
 ////////////////////////////BASE\\\\\\\\\\\\\\\\\\\\\\\\\\\
 body {
@@ -62,13 +59,7 @@ body {
 }
 
 .navbar-nav {
-
-
-
   margin: 0;
-
-
-
 }
 
 

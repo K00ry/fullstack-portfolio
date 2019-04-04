@@ -5,6 +5,7 @@ import Works from './works';
 import WorksDesktop from './worksDesktop';
 import WorksMobile from './worksMobile';
 import Sizes from 'react-sizes';
+// import ScrollTrigger from "react-scroll-trigger";
 
 
 class Portfolio extends Component {
@@ -70,7 +71,10 @@ class Portfolio extends Component {
         />;
         let isDesktop = <WorksDesktop works={this.state.works} />;
         return (
-            <section id="section-2" className="portfolio panel second .container-fluid" data-scroll="centerVertical,toggle(.scaleDownIn, .scaleDownOut)">
+
+            <section id="section-2" className={`portfolio panel second .container-fluid`}
+                     data-scroll="centerVertical,toggle(.scaleDownIn, .scaleDownOut)"
+            >
             <div id="projects" >
                 <h1 className="port-head">Work</h1>
                 <Works data={worksDataMobile}
@@ -92,6 +96,7 @@ class Portfolio extends Component {
                 {/*</MediaQuery>*/}
             </div>
             </section>
+
         );
     }
 }

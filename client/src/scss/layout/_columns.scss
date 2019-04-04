@@ -29,17 +29,21 @@
 .about {
   @include flex-display(flex, column, space-between, 100%, center);
 
-  margin-bottom: 4em;
+  //margin-bottom: 1em;
+  @include media(mobile-l) {
+    margin-bottom: 4em;
+  }
   @include media(landscape) {
     height: auto;
+
   }
   @include media(tablet) {
     height: 90vh;
-    //margin-bottom: 6em;
+    margin-bottom: 4em;
   }
   @include media(laptop) {
     height: auto;
-    margin-bottom: 10vh;
+    //margin-bottom: 3em;
   }
 
 
