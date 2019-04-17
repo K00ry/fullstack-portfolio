@@ -10,7 +10,7 @@
     margin: auto;
   }
 
-  h1 {
+  .main-meme {
     text-align: center;
     @include font-fam-size(2.6em, $main-font-2, bold, #333333);
     @include media(landscape) {
@@ -19,7 +19,7 @@
       font-size: 3.5em;
     }
   }
-  p {
+  .front-end {
     @include font-fam-size(1.4em, $main-font-2, bold, #333333);
     border-radius: 50%;
     @include media(tablet) {
@@ -190,7 +190,7 @@
   margin: auto;
   //margin-bottom: 15%;
   @include media(tablet) {
-    padding: 1em;
+    padding: 2em;
     width: 80%;
   }
   @include media(laptop) {

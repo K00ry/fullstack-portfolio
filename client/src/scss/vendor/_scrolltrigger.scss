@@ -97,3 +97,16 @@
   transform: scale(0.7,0.7);
   opacity: 0.0;
 }
+
+.fadeIn{
+  transition: background-color 1.0s ease, opacity 1.0s ease;
+  background-color:#FFF;
+  opacity: 1.0;
+
+}
+.FadeOut{
+  transition: background-color 1.0s ease, opacity 1.0s ease;
+  background-color:transparent;
+  opacity: 0.0;
+
+}

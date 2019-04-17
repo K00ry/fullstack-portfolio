@@ -48,9 +48,9 @@ class About extends Component {
 
         return (
             <section id="section-3" className="about panel third"
-                     data-scroll="toggle(.fromTopIn, .fromTopOut) offset(0,200)"
+                     data-scroll="toggle(.fromTopIn, .fromTopOut) offset(0,250)"
             >
-                <div className="about-main " >
+                <div className="about-main " data-scroll="toggle(.fadeIn, .fadeOut)" >
                     <div className="about-me-info">
                         <p>I am passionate about web technology, producing music, and being creative. I love learning new skills and sharing what I have learned because I believe the best way to master your skills is to share them with others. </p>
                     </div>
@@ -87,7 +87,7 @@ class About extends Component {
 
                     </div>
                     <div className="about-me-info">
-                        <p>I love the challenge of learning new tech everyday, and that is more than enough reason to love tech, especially front-end development.</p>
+                        <p>I love the challenge of learning new tech everyday, and that is more than enough reason to love tech, especially web development.</p>
                     </div>
                     <div className="contact" data-scroll="toggle(.scaleDownIn, .scaleDownOut)">
                         <h3>Love to hear from you!</h3>
