@@ -190,7 +190,7 @@
   margin: auto;
   //margin-bottom: 15%;
   @include media(tablet) {
-    padding: 2em;
+    padding: 2em 0;
     width: 80%;
   }
   @include media(laptop) {
@@ -258,57 +258,83 @@
 
     }
 
-    .skills-icons {
-      svg{
+
+  }
+}
+
+
+.skills {
+  @include flex-display(flex, row, center, 100%);
+
+  .skills__col {
+    @include flex-display(flex, column, space-around, 100%, center);
+
+      h2{
+        @include font-fam-size(1.3em, Futura, 400, $about-text);
+      }
+    .skills__col--svg {
+      padding: 2em;
+      svg {
         width: 40px;
         height: 40px;
-        margin:  .3em;
+        //margin: .3em;
       }
+
+      height: 100%;
       //opacity: 0;
       transition: all 0.5s;
-      @include flex-display(flex, row, center, 80%, center);
+      @include flex-display(flex, row, center, 100%, center);
 
       flex-wrap: wrap;
       @include media(tablet) {
         //width: 70%;
-        svg{
+        svg {
           width: 60px;
           height: 60px;
           //margin:  .3em;
-          margin: .3em 0.7em;
+          padding: .3em 0.4em;
         }
       }
-
-      @include media(laptop) {
-        svg{
-          width: 80px;
-          height: 80px;
-          margin: .9em .3em;
-        }
-      }
-      @include media(desktop) {
-        svg{
-          width: 80px;
-          height: 80px;
-          margin: 1.3em 0.7em;
-        }
-      }
-      .logo-skill {
-        max-width: 100%;
-        height: auto;
-        width: 30px;
-        margin: 6px;
-        @include media(tablet) {
-          width: 40px;
-        }
-
-        @include media(laptop) {
-          width: 50px;
-          margin: 0.7em;
-        }
-      }
+      //@include media(laptop) {
+      //  svg {
+      //    width: 80px;
+      //    height: 80px;
+      //    margin: .9em .3em;
+      //  }
+      //}
+      //@include media(desktop) {
+      //  svg {
+      //    width: 80px;
+      //    height: 80px;
+      //    margin: 1.3em 0.7em;
+      //  }
+      //}
     }
   }
+  .logo-skill {
+    max-width: 100%;
+    height: auto;
+    width: 30px;
+    margin: 6px;
+    @include media(tablet) {
+      width: 40px;
+    }
+
+    @include media(laptop) {
+      width: 50px;
+      margin: 0.7em;
+    }
+  }
+}
+
+//background for skills
+//orange
+.fe{ background-color: #F5C4B4; }
+//ghahv
+.be{background-color: #D33F49;}
+//zard
+.do{
+  background-color: #DEB841;
 }
 
 .contact {

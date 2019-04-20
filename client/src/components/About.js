@@ -17,6 +17,7 @@ import { ReactComponent as Word } from '../svg/wordpress.svg';
 import { ReactComponent as Html } from '../svg/html.svg';
 import { ReactComponent as Jquery } from '../svg/jquery.svg';
 import { ReactComponent as Heroku } from '../svg/heroku.svg';
+import { ReactComponent as Redux } from '../svg/redux.svg';
 
 
 
@@ -57,27 +58,51 @@ class About extends Component {
                     <div className="port-head-2-container"><h1 className="port-head-2">SKILLS</h1></div>
                     <div className="skills-main">
 
-                        <div className="skills-icons"
+                        <div className="skills"
                              // data-scroll="toggle(.scaleDownIn, .scaleDownOut)"
                         >
-                            <Mongo/>
-                            <Express/>
-                            <ReactL/>
-                            <Node/>
-                            <Es6/>
-                            <Html/>
-                            <Css/>
-                            <Sass/>
-                            <Js/>
-                            <Jquery/>
-                            <Php/>
-                            <Word/>
-                            <Webpack/>
+                            <div className="skills__col ">
+                                <h2>Front-end</h2>
+                                <div className="skills__col--svg fe">
+                                <ReactL/>
+                                <Redux/>
+                                <Jquery/>
+                                <Bootstrap/>
+                                <Html/>
+                                <Css/>
+                                <Sass/>
+                                <Js/>
+                                </div>
+                            </div>
+                            <div className="skills__col ">
+                                <h2>back-end</h2>
+                                <div className="skills__col--svg be">
+                                <Mongo/>
+                                <Express/>
+                                <Node/>
+                                <Es6/>
+                                <Php/>
+                                <Word/>
 
-                            <Bootstrap/>
-                            <Docker/>
-                            <Heroku/>
-                            <Git/>
+                            </div>
+
+                            </div>
+                            <div className="skills__col ">
+                                <h2>dev-ops</h2>
+                                <div className="skills__col--svg do">
+                                    <Webpack/>
+                                <Docker/>
+                                <Heroku/>
+                                <Git/>
+                            </div>
+
+                            </div>
+
+
+
+
+
+
 
 
 
