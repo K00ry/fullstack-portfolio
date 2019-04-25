@@ -6,10 +6,7 @@ import { Modal} from 'react-bootstrap';
 const WorksMobile = props => {
   let skills = props.works.tech.map((tech, index) => (
     <li key={index} className="tech-title">
-      <img
-          src={process.env.PUBLIC_URL + tech}
-          // src={tech}
-          alt="tech-logo" />
+        {tech}
     </li>
   ));
 
@@ -18,7 +15,7 @@ const WorksMobile = props => {
         show={props.openOverlay}
         onHide={props.closeOverlay}>
         <Modal.Header closeButton/>
-        {/*</Modal.Header>*/}
+
 
 
         <h1 id="title">{props.works.name}</h1>
@@ -26,7 +23,6 @@ const WorksMobile = props => {
         <div className="img-and-caption">
           <img id="over-img"
                src={process.env.PUBLIC_URL + props.works.img}
-               // src={props.works.img}
                alt={props.works.name} />
           <p id="info-text">{props.works.info}</p>
         </div>

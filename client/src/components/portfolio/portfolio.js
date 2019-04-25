@@ -5,40 +5,61 @@ import Works from './works';
 import WorksDesktop from './worksDesktop';
 import WorksMobile from './worksMobile';
 import Sizes from 'react-sizes';
-// import ScrollTrigger from "react-scroll-trigger";
+import { ReactComponent as Sass } from '../../svg/sass.svg';
+import { ReactComponent as Express } from '../../svg/express.svg';
+// import { ReactComponent as Mongo } from '../../svg/mongodb.svg';
+// import { ReactComponent as Bootstrap } from '../../svg/bootstrap.svg';
+import { ReactComponent as Es6 } from '../../svg/es6.svg';
+import { ReactComponent as Git } from '../../svg/git.svg';
+import { ReactComponent as Node } from '../../svg/node.svg';
+import { ReactComponent as ReactL } from '../../svg/react.svg';
+ import ScrollTrigger from "react-scroll-trigger";
+import {ReactComponent as Css} from "../../svg/css.svg";
+import {ReactComponent as Word} from "../../svg/wordpress.svg";
+
 
 
 class Portfolio extends Component {
   state = {
+      visible2: false,
             works: {
-                name: 'Pars Jadval',
-                img: 'img/work/responsive/6.png',
+                name: 'Studyum.io',
+                img: 'img/work/responsive/15.png',
                 info:
-                    'This React Built Project is the product showcase of a concrete precast company that i developed for mobile and tablet. Technologies used for this project include: React, React Router, React-Bootstrap, create-react-app, react-transition-group, i18next (for Localization).',
+                    "Studyum.io is E-learning Platform based on block-chain technology, I'm responsible for entire FullStack structure, From developing UI to user Registration. its a React App in front and uses Wordpress as headless CMS on back-end for ease of use and content management.",
                 tech: [
-                    'img/work/logos/react.png',
-                    'img/work/logos/html.png',
-                    'img/work/logos/es6.png',
-                    'img/work/logos/css.png',
-                    'img/work/logos/js.png',
-                    'img/work/logos/sass.svg',
-                    'img/work/logos/git.png',
+                    <ReactL/>,
+                    <Es6/>,
+                    <Node/>,
+                    <Express/>,
+                    <Css/>,
+                    <Sass/>,
+                    <Word/>,
+                    <Git/>,
                 ],
-                demo: 'http://www.parsjadval.kouroshmirzaei.com',
-                github: 'https://github.com/K00ry/pars-react',
+                demo: 'https://studyum.io',
+                github: 'https://github.com/K00ry/studyum',
             },
             responsiveMobile: false,
             show: false,
-            projectViewIndex:3,
+            projectViewIndex:0,
         };
+    onEnterViewport = () => {
+        this.setState({
+            visible2: true
+        });
+    };
+
+    onExitViewport = () => {
+        this.setState({
+            visible2: false
+        });
+    };
 
     isItActive = index => {
         return this.state.projectViewIndex === index;
     };
 
-    // setActiveTab = index => {
-    //     this.setState({ projectViewIndex: index });
-    // };
 
     getArray = rightWork => {
         this.setState({
@@ -48,21 +69,17 @@ class Portfolio extends Component {
         });
     };
 
-    // overlayClose = () =>{
-    //     this.setState({
-    //         show: false,
-    //     });
-    // };
-    handleClose=()=> {
+
+    handleClose =()=> {
         this.setState({ show: false });
     };
 
-    // handleShow() {
-    //     this.setState({ show: true });
-    // }
+
 
 
     render() {
+        let AnimeClass2;
+        this.state.visible2 === true ? AnimeClass2 = "scaleDownIn" : AnimeClass2 ="scaleDownOut";
 
         let isMobile = <WorksMobile
             works={this.state.works}
@@ -71,31 +88,26 @@ class Portfolio extends Component {
         />;
         let isDesktop = <WorksDesktop works={this.state.works} />;
         return (
+            <ScrollTrigger
+                throttleScroll={-100}
+                onEnter={this.onEnterViewport}
+                onExit={this.onExitViewport}
+            >
 
-            <section id="section-2" className={`portfolio panel second .container-fluid`}
-                     data-scroll="centerVertical,toggle(.scaleDownIn, .scaleDownOut)"
+            <section id="section-2" className={`portfolio panel second .container-fluid ${AnimeClass2}`}
+                     // data-scroll="centerHorizontal,toggle(.scaleDownIn, .scaleDownOut),offset(0,250)"
+                     // data-scroll="centerHorizontal,toggle(.fromTopIn, .fromTopOut), offset(0,250)"
             >
             <div id="projects" >
-                <h1 className="port-head">Work</h1>
                 <Works data={worksDataMobile}
                        handleClick={this.getArray}
                        isItActive={this.isItActive}
                         />
 
                 {this.props.isMobile ? isMobile : isDesktop}
-                {/*<MediaQuery query="(max-device-width: 767px)">*/}
-
-                    {/*<WorksMobile*/}
-                        {/*works={this.state.works}*/}
-                        {/*openOverlay={this.state.show}*/}
-                        {/*closeOverlay={this.overlayClose}*/}
-                    {/*/>*/}
-                {/*</MediaQuery>*/}
-                {/*<MediaQuery query="(min-device-width: 768px)">*/}
-
-                {/*</MediaQuery>*/}
             </div>
             </section>
+            </ScrollTrigger>
 
         );
     }

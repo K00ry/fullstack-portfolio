@@ -1,6 +1,6 @@
 .home {
   @include flex-display(flex, column, space-between, 100%, center);
-  height: 100vh;
+  height: 90vh;
   @include media(tablet) {
     height: 100vh;
     background: none;
@@ -9,14 +9,14 @@
 
 .portfolio {
   @include flex-display(flex, column, space-between, 100%, center);
-
+  padding: 8em 0;
 
 
   @include media(landscape) {
     height: 100vh;
   }
   @include media(tablet) {
-    height: 100vh;
+    height: auto;
     //margin-top: 3em;
 
   }
@@ -39,7 +39,7 @@
 
   }
   @include media(tablet) {
-    height: 90vh;
+    //height: 90vh;
     margin-bottom: 4em;
   }
   @include media(laptop) {

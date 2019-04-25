@@ -30,6 +30,7 @@
 
 #projects {
   @include flex-display(flex, column, space-between, 100%, center);
+
   @include media(tablet) {
     width: 100%;
     padding-top: 20px;
@@ -209,30 +210,55 @@
     margin-bottom: 0;
   }
   .port-head-2-container {
+    width: 100%;
     @include media(tablet) {
       margin: 1em;
     }
 
     .port-head-2 {
-      @include font-fam-size(1.5em, $main-font-2, bold, #333333);
-      margin: .5em auto;
+      @include font-fam-size(2em, $main-font-2, bold, #333333);
+      text-align: left;
+      margin: 1em  0;
+      padding: 0 .5em;
       @include media(tablet) {
+        padding: 0 ;
         font-size: 2em;
       }
       @include media(laptop) {
-        font-size: 3em;
+        padding: 0 .8em;
+        text-align: center;
+        //font-size: 3em;
       }
     }
   }
 
   .about-me-info {
-    p {
-      padding: 5px 10px;
-      @include font-fam-size(1.2em, Futura, 400, $about-text);
+    padding-top: 1em;
+    h3{
+      @include font-fam-size(2em, $main-font-2, bold, #333333);
+      width: 100%;
+      text-align: left;
+      padding:0 .5em;
+      @include media(tablet) {
+       padding: 0 ;
 
-      text-align: center;
+      }
+      @include media(laptop) {
+        padding: 0 .8em;
+       text-align: center;
+
+      }
+    }
+    p {
+      padding:  1em;
+
+      @include font-fam-size(1.2em, Futura, 500, $about-text);
+      text-align: left;
+
+      //text-align: center;
       margin: 0.5em 0;
       @include media(tablet) {
+        padding: 1em 0;
         @include font-fam-size(1.6em, Futura, 400, $about-text);
         margin: auto;
 
@@ -264,33 +290,56 @@
 
 
 .skills {
-  @include flex-display(flex, row, center, 100%);
+  @include flex-display(flex, column, center, 100%);
+
+
+  @include media(tablet) {
+    @include flex-display(flex, row, center, 100%);
+  }
+
 
   .skills__col {
     @include flex-display(flex, column, space-around, 100%, center);
 
+
       h2{
-        @include font-fam-size(1.3em, Futura, 400, $about-text);
+        @include font-fam-size(1.4em, Futura, 200, $about-text);
+        width: 100%;
+        margin: .5rem 0;
+        text-align: left;
+        padding: 0em 1em;
+
+        @include media(tablet) {
+          @include font-fam-size(1.3em, Futura, 400, $about-text);
+          text-align: center;
+        }
       }
     .skills__col--svg {
-      padding: 2em;
+      padding: 2em  1em;
+
       svg {
-        width: 40px;
-        height: 40px;
-        //margin: .3em;
+
+        max-width: 45px;
+        max-height: 45px;
+
+        @include media(tablet) {
+          padding: 2em;
+          max-width: 80px;
+          max-height: 80px;
+        }
       }
 
       height: 100%;
       //opacity: 0;
       transition: all 0.5s;
-      @include flex-display(flex, row, center, 100%, center);
+      @include flex-display(flex, row, space-evenly, 100%);
 
       flex-wrap: wrap;
       @include media(tablet) {
         //width: 70%;
         svg {
-          width: 60px;
-          height: 60px;
+          //width: 60px;
+          //height: 60px;
           //margin:  .3em;
           padding: .3em 0.4em;
         }
@@ -329,12 +378,18 @@
 
 //background for skills
 //orange
-.fe{ background-color: #F5C4B4; }
+.fe{
+  background-color: #95B8D1;
+
+}
 //ghahv
-.be{background-color: #D33F49;}
+.be{
+  background-color: #C8BFC7;
+
+}
 //zard
 .do{
-  background-color: #DEB841;
+  background-color: #E7724B;
 }
 
 .contact {

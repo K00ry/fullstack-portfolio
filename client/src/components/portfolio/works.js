@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+
 
 export default class Works extends Component {
 
@@ -32,7 +32,3 @@ export default class Works extends Component {
     return <ul id="mobile-portfolio">{works}</ul>;
   }
 }
-Works.propTypes = {
-  // data: PropTypes.array.isRequired,
-  handleClick: PropTypes.func.isRequired,
-};

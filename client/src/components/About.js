@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-// import {skills_svg} from "../data";
+import ScrollTrigger from "react-scroll-trigger";
 import { ReactComponent as Sass } from '../svg/sass.svg';
 import { ReactComponent as Express } from '../svg/express.svg';
 import { ReactComponent as Mongo } from '../svg/mongodb.svg';
-import { ReactComponent as Bootstrap } from '../svg/bootstrap.svg';
+
 import { ReactComponent as Css } from '../svg/css.svg';
 import { ReactComponent as Es6 } from '../svg/es6.svg';
 import { ReactComponent as Git } from '../svg/git.svg';
@@ -18,6 +18,8 @@ import { ReactComponent as Html } from '../svg/html.svg';
 import { ReactComponent as Jquery } from '../svg/jquery.svg';
 import { ReactComponent as Heroku } from '../svg/heroku.svg';
 import { ReactComponent as Redux } from '../svg/redux.svg';
+import { ReactComponent as Ec2 } from '../svg/ec2.svg';
+import { ReactComponent as Aws } from '../svg/aws.svg';
 
 
 
@@ -26,36 +28,48 @@ class About extends Component {
 
 
     state = {
+        visible: false
+    };
+    onEnterViewport = () => {
+        this.setState({
+            visible: true
+        });
+    };
 
-
+    onExitViewport = () => {
+        this.setState({
+            visible: false
+        });
     };
 
 
 
     render() {
 
-        // let skillIcons = this.state.skills.map((value,index) => <img className="logo-skill" key={index} src={process.env.PUBLIC_URL + value} alt="skill-logo"/>);
-        // let skillIcons = this.state.skills.map(value => {
-        //
-        // });
-            // React.createElement(value,{},null)
-        // let skillIcons;
-        // const TagName = this.state.skills[0];
-        // return skillIcons = <TagName />;
+        let AnimeClass;
+        this.state.visible === true ? AnimeClass = "scaleDownIn" : AnimeClass ="scaleDownOut";
 
-
-
-        // console.log(skillIcons);
 
         return (
-            <section id="section-3" className="about panel third"
-                     data-scroll="toggle(.fromTopIn, .fromTopOut) offset(0,250)"
+            <ScrollTrigger
+                throttleScroll={-100}
+                onEnter={this.onEnterViewport}
+                onExit={this.onExitViewport}
             >
-                <div className="about-main " data-scroll="toggle(.fadeIn, .fadeOut)" >
-                    <div className="about-me-info">
-                        <p>I am passionate about web technology, producing music, and being creative. I love learning new skills and sharing what I have learned because I believe the best way to master your skills is to share them with others. </p>
+            <section id="section-3" className={`about panel third ${AnimeClass}`}
+                     // data-scroll="toggle(.fromTopIn, .fromTopOut)"
+            >
+                <div className="about-main "
+                     // data-scroll="toggle(.fadeIn, .fadeOut), offset(0,350)"
+                >
+                    <div className="about-me-info ">
+                        <h3>ABOUT ME</h3>
+                        <p>I’m a full stack Web Developer with a background in music. I was born and raised in Tehran, Iran and moved to NYC about a decade ago as a member of the internationally recognized band The YellowDogs.<br/>
+                        I always had a strong/intense passion for technology, so after recognizing the links between tech and music, I decided to pursue a career in tech.<br/>
+                        I started my journey by acquiring FEWD Tech Degree from Treehouse, followed by a few years of self-education while simultaneously developing various projects working for startups and businesses. I love learning new skills and sharing what I have learned because I believe the best way to master your skills is to share them with others.</p>
+                        {/*<p>I am passionate about web technology, producing music, and being creative. I love learning new skills and sharing what I have learned because I believe the best way to master your skills is to share them with others. </p>*/}
                     </div>
-                    <div className="port-head-2-container"><h1 className="port-head-2">SKILLS</h1></div>
+                    <div className="port-head-2-container"><h1 className="port-head-2">MY SKILLS</h1></div>
                     <div className="skills-main">
 
                         <div className="skills"
@@ -66,20 +80,21 @@ class About extends Component {
                                 <div className="skills__col--svg fe">
                                 <ReactL/>
                                 <Redux/>
-                                <Jquery/>
-                                <Bootstrap/>
+
                                 <Html/>
                                 <Css/>
                                 <Sass/>
                                 <Js/>
+                                    <Jquery/>
+                                    {/*<Bootstrap/>*/}
                                 </div>
                             </div>
                             <div className="skills__col ">
-                                <h2>back-end</h2>
+                                <h2>Back-end</h2>
                                 <div className="skills__col--svg be">
+                                    <Node/>
                                 <Mongo/>
                                 <Express/>
-                                <Node/>
                                 <Es6/>
                                 <Php/>
                                 <Word/>
@@ -88,12 +103,15 @@ class About extends Component {
 
                             </div>
                             <div className="skills__col ">
-                                <h2>dev-ops</h2>
+                                <h2>Dev-ops</h2>
                                 <div className="skills__col--svg do">
                                     <Webpack/>
                                 <Docker/>
+                                <Ec2/>
+                                    <Aws/>
                                 <Heroku/>
                                 <Git/>
+
                             </div>
 
                             </div>
@@ -112,6 +130,7 @@ class About extends Component {
 
                     </div>
                     <div className="about-me-info">
+
                         <p>I love the challenge of learning new tech everyday, and that is more than enough reason to love tech, especially web development.</p>
                     </div>
                     <div className="contact" data-scroll="toggle(.scaleDownIn, .scaleDownOut)">
@@ -123,6 +142,7 @@ class About extends Component {
                     </div>
                 </div>
             </section>
+            </ScrollTrigger>
 
         );
     }

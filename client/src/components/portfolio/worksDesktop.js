@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import Skills from './skills';
 
 const WorksDesktop = props => {
@@ -29,8 +29,6 @@ const WorksDesktop = props => {
   );
 };
 
-Skills.propTypes = {
-  works: PropTypes.object.isRequired,
-};
+
 
 export default WorksDesktop;

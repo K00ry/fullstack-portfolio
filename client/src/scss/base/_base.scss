@@ -87,7 +87,7 @@ body {
   @include media(desktop) {
 
     font-weight: bolder;
-    margin: 10px;
+    //margin: 10px;
   }
 }
 
@@ -155,8 +155,8 @@ body {
     @include media(landscape) {
       padding: 0;
     }
-    ul {
-      @include flex-display(flex, row, space-around, 80%, center);
+    ul{
+      @include flex-display(flex, row, space-around, 90%, center);
       flex-wrap: wrap;
       @include font-fam-size(0.7em, $main-font-3, bold, #ebebeb);
       padding: 5px;
@@ -164,13 +164,21 @@ body {
         width: 40%;
         padding: 0.2em;
       }
-      .tech-title {
-        width: 15%;
-        img {
-          max-width: 100%;
-          height: auto;
-        }
-      }
+
+    }
+  }
+}
+.tech-title {
+  @include media(tablet) {
+    width: 15%;
+  }
+  svg{
+    //margin:0 1em;
+    width: 30px;
+    height: 30px;
+    @include media(laptop) {
+      width: 50px;
+      height: 50px;
     }
   }
 }
@@ -274,20 +282,10 @@ body {
       }
     }
     .tech-ov {
-      @include flex-display(flex, row, space-evenly, 40%, center);
+      @include flex-display(flex, row, center, 40%, center);
 
       @include media(laptop) {
-      }
-    }
-    .tech-title {
-      width: 15%;
-      //margin: 0 6px;
-      img {
-        max-width: 100%;
-        height: auto;
-
-        @include media(laptop) {
-        }
+        width: 50%;
       }
     }
   }
@@ -295,6 +293,7 @@ body {
     width: 80%;
   }
 }
+
 
 ///* BACKGROUND VIDEO STYLES *\\\\
 
