@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import Scrollspy from 'react-scrollspy'
+import Scrollspy from 'react-scrollspy';
+import { Link} from 'react-scroll';
 
 class Navigation extends Component {
     render() {
@@ -9,14 +10,22 @@ class Navigation extends Component {
                             className="nav navbar-nav" currentClassName="active-me"
                             offset={-150}
                 >
+
                     <li className="nav-li " >
-                        <a href="#section-1" className="nav-li--a" id="home-link">HOME</a>
+                        <Link to="home" spy={true} smooth={true} offset={-50} duration={1500}>
+                            <span className="nav-li--a" id="home-link">HOME</span>
+                        </Link>
                     </li>
+
                     <li className="nav-li" >
-                        <a href="#section-2" className="nav-li--a" id="port-link" >PORTFOLIO</a>
-                    </li>
+                        <Link to="portfolio" spy={true} smooth={true} offset={50} duration={1500}>
+                            <span className="nav-li--a" id="port-link">PORTFOLIO</span>
+                        </Link>
+                     </li>
                     <li className="nav-li" >
-                        <a href="#section-3" className="nav-li--a" id="about-link">ABOUT</a>
+                        <Link to="about" spy={true} smooth={true} offset={-250} duration={1500}>
+                            <span  className="nav-li--a" id="about-link">ABOUT</span>
+                        </Link>
                     </li>
                 </Scrollspy>
             </nav>

@@ -62,6 +62,24 @@ export const data = [
     github: 'https://github.com/K00ry/pars-fullstack',
   },
   {
+    name: 'YAASSS Music',
+    img: 'img/work/responsive/17.png',
+    info:
+        'Web Platform for the Great Yaasss Band. Technologies used are React, Strapi CMS for content management, MongoDb for Database and AWS S3 for Storage.',
+    tech: [
+      <ReactL/>,
+      <Redux/>,
+      <Sass/>,
+      <Bootstrap/>,
+      <Mongo/>,
+      <Heroku/>,
+      <Aws/>,
+      <Git/>,
+    ],
+    demo: 'https://naughty-euclid-6bae38.netlify.com/',
+    github: 'https://github.com/K00ry/yaasss',
+  },
+  {
     name: 'React Web API',
     img: 'img/work/responsive/1.png',
     info:
@@ -76,21 +94,6 @@ export const data = [
     ],
     demo: 'https://k00ry.github.io/react-web-api/',
     github: 'https://github.com/K00ry/react-web-api',
-  },
-
-  {
-    name: 'Interactive Player',
-    img: 'img/work/responsive/4.png',
-    info:
-      'This video player has custom controls created with CSS and Javascript. There is a functional caption track as well as an interactive transcript which highlights the text as the video plays. The text can be clicked on to jump to the appropriate time index in the video.',
-    tech: [
-      <Html/>,
-      <Css/>,
-      <Js/>,
-      <Git/>,
-    ],
-    demo: 'https://k00ry.github.io/video_player_v2/',
-    github: 'https://github.com/K00ry/video_player_v2',
   },
   {
     name: 'WEB APP',
@@ -111,18 +114,18 @@ export const data = [
     github: 'https://github.com/K00ry/web_app_dashboard_v2',
   },
   {
-    name: 'Registration Form',
-    img: 'img/work/responsive/5.png',
+    name: 'Interactive Player',
+    img: 'img/work/responsive/4.png',
     info:
-      'Similar to Responsive Layout project, I used a mobile-first approach to create a responsive form. The validation relies on HTML5 required tags. This form is created as part of the Techdegree program, an intensive 6 months online coding bootcamp.',
+      'This video player has custom controls created with CSS and Javascript. There is a functional caption track as well as an interactive transcript which highlights the text as the video plays. The text can be clicked on to jump to the appropriate time index in the video.',
     tech: [
       <Html/>,
       <Css/>,
-
+      <Js/>,
       <Git/>,
     ],
-    demo: 'https://k00ry.github.io/online_registration_v2/',
-    github: 'https://github.com/K00ry/online_registration_v2',
+    demo: 'https://k00ry.github.io/video_player_v2/',
+    github: 'https://github.com/K00ry/video_player_v2',
   },
 ];
 
@@ -167,21 +170,12 @@ export const skills_svg = [
   <Git/>
 ];
 
-export const worksData = [
-  { id: 1, name: 'Responsive Layout', src: 'img/work/responsive/3.png' },
-  { id: 2, name: 'WEB APP', src: 'img/work/responsive/2.png' },
-  { id: 3, name: 'React Web API', src: 'img/work/responsive/1.png' },
-  { id: 4, name: 'Pars Jadval', src: 'img/work/responsive/6.png' },
-  { id: 5, name: 'Video Player', src: 'img/work/responsive/4.png' },
-  { id: 6, name: 'Registration Form', src: 'img/work/responsive/5.png' },
 
-];
 export const worksDataMobile = [
   { id: 1, name: 'Studyum.io', src: 'img/work/responsive/15.png' },
   { id: 4, name: 'Pars Jadval', src: 'img/work/responsive/16.png' },
+  { id: 6, name: 'YAASSS Music', src: 'img/work/responsive/17.png' },
   { id: 3, name: 'React Web API', src: 'img/work/responsive/1.png' },
-  { id: 5, name: 'Video Player', src: 'img/work/responsive/4.png' },
   { id: 2, name: 'WEB APP', src: 'img/work/responsive/2.png' },
-  { id: 6, name: 'Registration Form', src: 'img/work/responsive/5.png' },
-
+  { id: 5, name: 'Video Player', src: 'img/work/responsive/4.png' },
 ];

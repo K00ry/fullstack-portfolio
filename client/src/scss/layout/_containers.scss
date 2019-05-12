@@ -234,6 +234,14 @@
 
   .about-me-info {
     padding-top: 1em;
+    h3::before {
+      display: block;
+      content: " ";
+      margin-top: -285px;
+      height: 285px;
+      visibility: hidden;
+      pointer-events: none;
+    }
     h3{
       @include font-fam-size(2em, $main-font-2, bold, #333333);
       width: 100%;

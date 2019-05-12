@@ -5,6 +5,7 @@ import Works from './works';
 import WorksDesktop from './worksDesktop';
 import WorksMobile from './worksMobile';
 import Sizes from 'react-sizes';
+import {Element } from 'react-scroll';
 import { ReactComponent as Sass } from '../../svg/sass.svg';
 import { ReactComponent as Express } from '../../svg/express.svg';
 // import { ReactComponent as Mongo } from '../../svg/mongodb.svg';
@@ -93,6 +94,7 @@ class Portfolio extends Component {
                 onEnter={this.onEnterViewport}
                 onExit={this.onExitViewport}
             >
+                <Element name="portfolio">
 
             <section id="section-2" className={`portfolio panel second .container-fluid ${AnimeClass2}`}
                      // data-scroll="centerHorizontal,toggle(.scaleDownIn, .scaleDownOut),offset(0,250)"
@@ -107,7 +109,9 @@ class Portfolio extends Component {
                 {this.props.isMobile ? isMobile : isDesktop}
             </div>
             </section>
+                </Element>
             </ScrollTrigger>
+
 
         );
     }

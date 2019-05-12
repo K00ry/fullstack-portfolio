@@ -66,6 +66,7 @@ body {
 .nav-li--a {
   outline: none;
   transition: all 0.5s;
+  cursor: pointer;
   &:hover{
     color: #fff;
     text-decoration: none;
@@ -125,7 +126,7 @@ body {
 .modal-content {
   @include flex-display(flex, column, flex-start, 100%, center);
 
-  background: $hard-blue-l;
+  background: $light-blue;
   @include media(landscape) {
     z-index: 1060;
     overflow: hidden;

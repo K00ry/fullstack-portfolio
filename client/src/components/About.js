@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ScrollTrigger from "react-scroll-trigger";
+import {Element } from 'react-scroll';
 import { ReactComponent as Sass } from '../svg/sass.svg';
 import { ReactComponent as Express } from '../svg/express.svg';
 import { ReactComponent as Mongo } from '../svg/mongodb.svg';
@@ -59,7 +60,7 @@ class About extends Component {
             <section id="section-3" className={`about panel third ${AnimeClass}`}
                      // data-scroll="toggle(.fromTopIn, .fromTopOut)"
             >
-                <div className="about-main "
+                <Element name="about" className="about-main "
                      // data-scroll="toggle(.fadeIn, .fadeOut), offset(0,350)"
                 >
                     <div className="about-me-info ">
@@ -140,7 +141,7 @@ class About extends Component {
                             <h4><a href="tel:+1(917)-414-6858">+1 (917)-414-6858</a></h4>
                         </address>
                     </div>
-                </div>
+                </Element>
             </section>
             </ScrollTrigger>
 
