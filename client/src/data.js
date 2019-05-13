@@ -172,10 +172,10 @@ export const skills_svg = [
 
 
 export const worksDataMobile = [
-  { id: 1, name: 'Studyum.io', src: 'img/work/responsive/15.png' },
-  { id: 4, name: 'Pars Jadval', src: 'img/work/responsive/16.png' },
-  { id: 6, name: 'YAASSS Music', src: 'img/work/responsive/17.png' },
-  { id: 3, name: 'React Web API', src: 'img/work/responsive/1.png' },
-  { id: 2, name: 'WEB APP', src: 'img/work/responsive/2.png' },
-  { id: 5, name: 'Video Player', src: 'img/work/responsive/4.png' },
+  { id: 1, name: 'Studyum.io', src: 'img/work/responsive-works/15.png' },
+  { id: 4, name: 'Pars Jadval', src: 'img/work/responsive-works/16.png' },
+  { id: 6, name: 'YAASSS Music', src: 'img/work/responsive-works/17.png' },
+  { id: 3, name: 'React Web API', src: 'img/work/responsive-works/1.png' },
+  { id: 2, name: 'WEB APP', src: 'img/work/responsive-works/2.png' },
+  { id: 5, name: 'Video Player', src: 'img/work/responsive-works/4.png' },
 ];
