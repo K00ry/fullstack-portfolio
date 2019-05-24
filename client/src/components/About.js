@@ -65,9 +65,15 @@ class About extends Component {
                 >
                     <div className="about-me-info ">
                         <h3>ABOUT ME</h3>
+
+                        <div className="about-me-info__info">
+                            <div className="about-me-info__info--img">
+                                <img alt="koory mirzaei" src={process.env.PUBLIC_URL+ 'img/work/koory.png'}/>
+                            </div>
                         <p>I’m a full stack Web Developer with a background in music. I was born and raised in Tehran, Iran and moved to NYC about a decade ago as a member of the internationally recognized band The YellowDogs.<br/>
                         I always had a strong/intense passion for technology, so after recognizing the links between tech and music, I decided to pursue a career in tech.<br/>
                         I started my journey by acquiring FEWD Tech Degree from Treehouse, followed by a few years of self-education while simultaneously developing various projects working for startups and businesses. I love learning new skills and sharing what I have learned because I believe the best way to master your skills is to share them with others.</p>
+                        </div>
                         {/*<p>I am passionate about web technology, producing music, and being creative. I love learning new skills and sharing what I have learned because I believe the best way to master your skills is to share them with others. </p>*/}
                     </div>
                     <div className="port-head-2-container"><h1 className="port-head-2">MY SKILLS</h1></div>
@@ -130,7 +136,7 @@ class About extends Component {
                         </div>
 
                     </div>
-                    <div className="about-me-info">
+                    <div className="closing-info">
 
                         <p>I love the challenge of learning new tech everyday, and that is more than enough reason to love tech, especially web development.</p>
                     </div>

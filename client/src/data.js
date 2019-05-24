@@ -113,20 +113,20 @@ export const data = [
     demo: 'https://k00ry.github.io/web_app_dashboard_v2/',
     github: 'https://github.com/K00ry/web_app_dashboard_v2',
   },
-  {
-    name: 'Interactive Player',
-    img: 'img/work/responsive/4.png',
-    info:
-      'This video player has custom controls created with CSS and Javascript. There is a functional caption track as well as an interactive transcript which highlights the text as the video plays. The text can be clicked on to jump to the appropriate time index in the video.',
-    tech: [
-      <Html/>,
-      <Css/>,
-      <Js/>,
-      <Git/>,
-    ],
-    demo: 'https://k00ry.github.io/video_player_v2/',
-    github: 'https://github.com/K00ry/video_player_v2',
-  },
+  // {
+  //   name: 'Interactive Player',
+  //   img: 'img/work/responsive/4.png',
+  //   info:
+  //     'This video player has custom controls created with CSS and Javascript. There is a functional caption track as well as an interactive transcript which highlights the text as the video plays. The text can be clicked on to jump to the appropriate time index in the video.',
+  //   tech: [
+  //     <Html/>,
+  //     <Css/>,
+  //     <Js/>,
+  //     <Git/>,
+  //   ],
+  //   demo: 'https://k00ry.github.io/video_player_v2/',
+  //   github: 'https://github.com/K00ry/video_player_v2',
+  // },
 ];
 
 export const skills = [
@@ -177,5 +177,5 @@ export const worksDataMobile = [
   { id: 6, name: 'YAASSS Music', src: 'img/work/responsive-works/17.png' },
   { id: 3, name: 'React Web API', src: 'img/work/responsive-works/1.png' },
   { id: 2, name: 'WEB APP', src: 'img/work/responsive-works/2.png' },
-  { id: 5, name: 'Video Player', src: 'img/work/responsive-works/4.png' },
+  // { id: 5, name: 'Video Player', src: 'img/work/responsive-works/4.png' },
 ];
