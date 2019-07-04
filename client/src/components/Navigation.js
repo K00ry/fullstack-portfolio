@@ -6,7 +6,7 @@ class Navigation extends Component {
     render() {
         return (
             <nav className="navbar sticky-top ">
-                <Scrollspy  items={ ['section-1', 'section-2','section-3']}
+                <Scrollspy  items={ ['section-1', 'section-2','section-3','section-4']}
                             className="nav navbar-nav" currentClassName="active-me"
                             offset={-150}
                 >
@@ -23,12 +23,12 @@ class Navigation extends Component {
                         </Link>
                      </li>
                     <li className="nav-li" >
-                        <Link to="about" spy={true} smooth={true} offset={-250} duration={1500}>
+                        <Link to="about" spy={true} smooth={true} offset={-200} duration={1500}>
                             <span  className="nav-li--a" id="about-link">ABOUT</span>
                         </Link>
                     </li>
                     <li className="nav-li" >
-                        <Link to="skills" spy={true} smooth={true} offset={-250} duration={1500}>
+                        <Link to="skills" spy={true} smooth={true} offset={-150} duration={1500}>
                             <span  className="nav-li--a" id="about-link">SKILLS</span>
                         </Link>
                     </li>

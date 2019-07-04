@@ -200,7 +200,7 @@
     width: 80%;
   }
   @include media(laptop) {
-    width: 70%;
+    width: 80%;
     background-color: #fff;
 
     //margin-bottom: 7em;
@@ -214,31 +214,7 @@
   @include media(landscape) {
     margin-bottom: 0;
   }
-  .port-head-2-container {
-    width: 100%;
-    padding: 0 1em;
 
-    @include media(tablet) {
-      margin: 1em;
-    }
-
-    .port-head-2 {
-      @include font-fam-size(2em, $main-font-2, bold, #333333);
-      text-align: left;
-      margin: 1em  0;
-      //padding: 0 .6em;
-      @include media(tablet) {
-        padding: 0 ;
-        font-size: 2em;
-      }
-      @include media(laptop) {
-        padding: 0 1em;
-        text-align: center;
-
-        //font-size: 3em;
-      }
-    }
-  }
 
   .about-me-info {
     padding: 1em;
@@ -252,15 +228,10 @@
     //}
     @include media(tablet) {
       padding: 0 ;
-
     }
     @include media(laptop) {
       padding: 0 2em;
-
-
     }
-
-
     h3{
       @include font-fam-size(2em, $main-font-2, bold, #333333);
       width: 100%;
@@ -271,12 +242,9 @@
 
       }
       @include media(laptop) {
-        //padding: 0 .8em;
        text-align: left;
-
       }
     }
-
     .about-me-info__info{
       .about-me-info__info--img{
         width: 40%;
@@ -298,16 +266,9 @@
           height: auto;
         }
       }
-
-
-
       p {
-        //padding:  1em;
-
         @include font-fam-size(1em, Futura, 500, $about-text);
-        text-align: justify;
-
-        //text-align: center;
+        text-align: -webkit-left;
         margin: 0.5em 0;
         @include media(tablet) {
           //padding: 1em 0;
@@ -320,6 +281,7 @@
           //width: 80%;
           font-size: 1.4em;
           font-weight: 600;
+          line-height: 40px;
         }
         @include media(desktop) {
           @include font-fam-size(1.4em, Futura, 400, $about-text);
@@ -328,23 +290,56 @@
         }
       }
     }
+  }
+}
 
+.skills-main-area{
+  @include media(tablet) {
+    padding: 0;
+  }
+  @include media(laptop) {
+   background-color: #fff;
   }
 
-  .skills-main {
-    @include flex-display(flex, column, space-around, 100%, center);
+  .skills-title__block{
+    width: 100%;
+    padding: 0 1em;
+
     @include media(tablet) {
-      padding-bottom: 1em;
-
-    }
-    @include media(desktop) {
-      padding-bottom: 2em;
-
+      margin: 1em;
     }
 
+    .skills-title__block--title {
+      @include font-fam-size(2em, $main-font-2, bold, #333333);
+      text-align: left;
+      margin: 1em  0;
+      @include media(tablet) {
+        padding: 0 ;
+        font-size: 2.2em;
+        text-align: center;
+      }
+      @include media(laptop) {
+        padding: 0 1em;
+        text-align: center;
+      }
+    }
+  }
 
+}
+
+.skills-main {
+  @include flex-display(flex, column, space-around, 100%, center);
+  @include media(tablet) {
+    //padding-bottom: 1em;
 
   }
+  @include media(desktop) {
+    //padding-bottom: 2em;
+
+  }
+
+
+
 }
 
 
@@ -375,6 +370,10 @@
       }
     .skills__col--svg {
       padding: 2em  2em;
+      @include media(laptop) {
+        padding: 2em  2em;
+      }
+
       @include media(desktop) {
         padding: 2em  4em;
       }

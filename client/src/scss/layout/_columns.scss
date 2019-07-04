@@ -21,13 +21,41 @@
 
   }
   @include media(laptop) {
-    margin-bottom: 10em;
+    margin-bottom: 5em;
     height: auto;
   }
 
 }
 
 .about {
+  @include flex-display(flex, column, space-between, 100%, center);
+
+  padding: 8em 0;
+  @include media(mobile-l) {
+    margin-bottom: 4em;
+  }
+  @include media(landscape) {
+    height: auto;
+
+  }
+  @include media(tablet) {
+    //height: 90vh;
+    margin-bottom: 4em;
+  }
+  @include media(laptop) {
+    height: auto;
+    margin-bottom: 3em;
+  }
+
+
+
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    height: auto;
+  }
+}
+
+.skills{
   @include flex-display(flex, column, space-between, 100%, center);
 
   //margin-bottom: 1em;
@@ -44,13 +72,11 @@
   }
   @include media(laptop) {
     height: auto;
-    //margin-bottom: 3em;
+    padding-top: 3em;
   }
-
-
-
-
   @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
     height: auto;
   }
+
+
 }

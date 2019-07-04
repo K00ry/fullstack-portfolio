@@ -217,6 +217,7 @@ body {
 
 #overlay-desktop {
   display: none;
+  margin: auto;
   @include media(tablet) {
     //opacity: 0;
     @include flex-display(flex, column, flex-start, 90%, center);

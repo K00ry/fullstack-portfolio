@@ -8,6 +8,7 @@ import Sizes from 'react-sizes';
 import {Element } from 'react-scroll';
 import { ReactComponent as Sass } from '../../svg/sass.svg';
 import { ReactComponent as Express } from '../../svg/express.svg';
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 // import { ReactComponent as Mongo } from '../../svg/mongodb.svg';
 // import { ReactComponent as Bootstrap } from '../../svg/bootstrap.svg';
 import { ReactComponent as Es6 } from '../../svg/es6.svg';
@@ -87,7 +88,21 @@ class Portfolio extends Component {
             openOverlay={this.state.show}
             closeOverlay={this.handleClose}
         />;
-        let isDesktop = <WorksDesktop works={this.state.works} />;
+        let isDesktop =
+
+            <TransitionGroup component="div" className="wrapper">
+                <CSSTransition
+                    key={this.state.projectViewIndex}
+                    timeout={300}
+                    classNames="page">
+                    <WorksDesktop works={this.state.works} />
+                </CSSTransition>
+
+            </TransitionGroup>
+
+
+
+            ;
         return (
             <ScrollTrigger
                 throttleScroll={-100}
