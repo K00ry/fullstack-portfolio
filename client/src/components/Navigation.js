@@ -27,6 +27,11 @@ class Navigation extends Component {
                             <span  className="nav-li--a" id="about-link">ABOUT</span>
                         </Link>
                     </li>
+                    <li className="nav-li" >
+                        <Link to="skills" spy={true} smooth={true} offset={-250} duration={1500}>
+                            <span  className="nav-li--a" id="about-link">SKILLS</span>
+                        </Link>
+                    </li>
                 </Scrollspy>
             </nav>
         );

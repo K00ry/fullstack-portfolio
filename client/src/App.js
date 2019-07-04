@@ -11,6 +11,7 @@ import Navigation from "./components/Navigation";
 import About from "./components/About";
 import Home from "./components/Home";
 import BackgroundVideo from "./components/BackgroundVideo";
+import Skills from "./components/Skills";
 class App extends Component {
   state ={
     greet:'',
@@ -71,10 +72,9 @@ class App extends Component {
         <main id="main-of-main">
           <Navigation/>
           <Home/>
-
           <Portfolio />
-
           <About/>
+          <Skills/>
         </main>
         <Footer/>
 
