@@ -46,7 +46,7 @@ class Skills extends Component {
                 onEnter={this.onEnterViewport}
                 onExit={this.onExitViewport}
             >
-                <section id="section-4" className={`skills panel third ${AnimeClass}`}>
+                <section id="section-4" className={` container skills panel third ${AnimeClass}`}>
                     <Element name="skills" className="skills-main-area container">
                         <div className="skills-title__block">
                             <h1 className="skills-title__block--title">MY SKILLS</h1>

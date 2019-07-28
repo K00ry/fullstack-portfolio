@@ -111,7 +111,7 @@ class Portfolio extends Component {
             >
                 <Element name="portfolio">
 
-            <section id="section-2" className={`portfolio panel second .container-fluid ${AnimeClass2}`}
+            <section id="section-2" className={`portfolio panel second container ${AnimeClass2}`}
                      // data-scroll="centerHorizontal,toggle(.scaleDownIn, .scaleDownOut),offset(0,250)"
                      // data-scroll="centerHorizontal,toggle(.fromTopIn, .fromTopOut), offset(0,250)"
             >

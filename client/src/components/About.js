@@ -34,7 +34,7 @@ class About extends Component {
                 onEnter={this.onEnterViewport}
                 onExit={this.onExitViewport}
             >
-            <section id="section-3" className={`about panel third ${AnimeClass}`}
+            <section id="section-3" className={`container about panel third ${AnimeClass}`}
                      // data-scroll="toggle(.fromTopIn, .fromTopOut)"
             >
                 <Element name="about" className="about-main "
