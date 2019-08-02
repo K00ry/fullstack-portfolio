@@ -13,7 +13,7 @@ const WorksDesktop = props => {
         />
       </div>
       <div className="title-tech-ov">
-        <h1 className="title-ov">{props.works.name}</h1>
+        <h3 className="title-ov">{props.works.name}</h3>
         <ul className="links">
           <li className="git-ov">
             <a href={props.works.github}>GITHUB</a>

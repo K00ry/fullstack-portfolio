@@ -47,9 +47,9 @@ class About extends Component {
                             <div className="about-me-info__info--img">
                                 <img alt="koory mirzaei" src={process.env.PUBLIC_URL+ 'img/work/koory.png'}/>
                             </div>
-                        <p>I’m a full stack Web Developer with a background in music. I was born and raised in Tehran, Iran and moved to NYC about a decade ago as a member of the internationally recognized band The YellowDogs.<br/>
-                        I always had a strong/intense passion for technology, so after recognizing the links between tech and music, I decided to pursue a career in tech.<br/>
-                        I started my journey by acquiring FEWD Tech Degree from Treehouse, followed by a few years of self-education while simultaneously developing various projects working for startups and businesses. I love learning new skills and sharing what I have learned because I believe the best way to master your skills is to share them with others.</p>
+                            <p>I’m a full stack Web Developer with a background in music. I was born and raised in Tehran, Iran and moved to NYC about a decade ago as a member of the internationally recognized band The YellowDogs.</p>
+                            <p>I always had a strong/intense passion for technology, so after recognizing the links between tech and music, I decided to pursue a career in tech.</p>
+                            <p>I started my journey by acquiring FEWD Tech Degree from Treehouse, followed by a few years of self-education while simultaneously developing various projects working for startups and businesses. I love learning new skills and sharing what I have learned because I believe the best way to master your skills is to share them with others.</p>
                         </div>
                         {/*<p>I am passionate about web technology, producing music, and being creative. I love learning new skills and sharing what I have learned because I believe the best way to master your skills is to share them with others. </p>*/}
                     </div>

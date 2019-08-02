@@ -1,3 +1,16 @@
+.click-button{
+  text-align: center;
+  background-color: #333333;
+  font-size: 1em;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  color: #ffffff;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  padding: .5em;
+}
+
+
 .links {
   margin-bottom: 40px;
   @include flex-display(flex, row, space-between, 80%, center);
@@ -20,7 +33,7 @@
     width: 50%;
     background-color: #333333;
 
-    @include font-fam-size(1.6em, $main-font-2, 200, #ffffff);
+    @include font-fam-size(1em, $main-font-2, 200, #ffffff);
 
     transition: all 0.7s;
     margin: 8px 8px;

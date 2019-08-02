@@ -1,17 +1,25 @@
 import React, {Component} from 'react';
 import Scrollspy from 'react-scrollspy';
 import { Link} from 'react-scroll';
+import Sizes from "react-sizes";
 
 class Navigation extends Component {
     render() {
+
+        let isMobile =<Link to="about" spy={true} smooth={true} offset={-150} duration={1500}>
+            <span  className="nav-li--a" id="about-link">ABOUT</span>
+        </Link>;
+        let isDesktop =<Link to="about" spy={true} smooth={true} offset={-300} duration={1500}>
+            <span  className="nav-li--a" id="about-link">ABOUT</span>
+        </Link>;
         return (
             <nav className="navbar sticky-top ">
                 <Scrollspy  items={ ['section-1', 'section-2','section-3','section-4']}
-                            className="nav navbar-nav" currentClassName="active-me"
+                            className="nav navbar-nav container" currentClassName="active-me"
                             offset={-150}
                 >
 
-                    <li className="nav-li " >
+                    <li className="nav-li">
                         <Link to="home" spy={true} smooth={true} offset={-50} duration={1500}>
                             <span className="nav-li--a" id="home-link">HOME</span>
                         </Link>
@@ -23,12 +31,10 @@ class Navigation extends Component {
                         </Link>
                      </li>
                     <li className="nav-li" >
-                        <Link to="about" spy={true} smooth={true} offset={-200} duration={1500}>
-                            <span  className="nav-li--a" id="about-link">ABOUT</span>
-                        </Link>
+                            {this.props.isMobile ? isMobile : isDesktop}
                     </li>
                     <li className="nav-li" >
-                        <Link to="skills" spy={true} smooth={true} offset={-150} duration={1500}>
+                        <Link to="skills" spy={true} smooth={true} offset={-250} duration={1500}>
                             <span  className="nav-li--a" id="about-link">SKILLS</span>
                         </Link>
                     </li>
@@ -38,4 +44,7 @@ class Navigation extends Component {
     }
 }
 
-export default Navigation;
+const mapSizesToProps = ({ width }) => ({
+    isMobile: width < 766,
+});
+export default Sizes(mapSizesToProps)(Navigation);

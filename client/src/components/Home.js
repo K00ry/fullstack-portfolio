@@ -4,8 +4,8 @@ const Home = () => {
     return (
         <section id="section-1" className="home panel first">
             <div id="home-wrap" data-scroll="toggle(.scaleDownIn, .scaleDownOut)">
-                <h1 className="main-meme">KOUROSH MIRZAEI</h1>
-                <p className="main-meme front-end">Full Stack Developer.</p>
+                <h2 className="main-meme">KOUROSH MIRZAEI</h2>
+                <h1 className="main-meme front-end">Full Stack Developer.</h1>
             </div>
         </section>
     );

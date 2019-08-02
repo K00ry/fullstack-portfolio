@@ -18,7 +18,7 @@ const WorksMobile = props => {
 
 
 
-        <h1 id="title">{props.works.name}</h1>
+        <h3 id="title">{props.works.name}</h3>
       <div className="lay-img">
         <div className="img-and-caption">
           <img id="over-img"

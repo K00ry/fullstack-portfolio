@@ -25,7 +25,7 @@ export default class Works extends Component {
                     // src={work.src}
                     alt={work.name} />
           </div>
-          <span className="caption">{work.name}</span>
+          <span className="caption click-button">{work.name}</span>
         </li>
       );
     });

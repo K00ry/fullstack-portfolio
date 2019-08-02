@@ -79,18 +79,21 @@
 }
 
 #mobile-portfolio {
-  //opacity: 0;
+
   @include flex-display(flex, column, space-around, 100%, center);
+  padding:0 1em;
   @include media(landscape) {
-    //height: 100vh;
+
     @include flex-display(flex, row, space-evenly, 100%, center);
     flex-wrap: wrap;
   }
   @include media(tablet) {
-    @include flex-display(flex, row, space-around, 98%, center);
+    padding: 0;
+    @include flex-display(flex, row, space-around, 100%, center);
     margin: 1em auto;
   }
   @include media(laptop) {
+
 
   }
   .last {
@@ -98,9 +101,9 @@
   }
   .work-mobile {
     z-index: 2;
-    @include flex-display(flex, row-reverse, center, 100%, center);
+    @include flex-display(flex, column, center, 100%, center);
 
-    margin: 1em auto;
+    margin: 2em auto;
 
     @include media(landscape) {
       @include flex-display(flex, column, space-around, 20%, center);
@@ -113,7 +116,8 @@
       margin: 0;
     }
     .img-border {
-      width: 50%;
+
+      margin-bottom: 1em;
       @include media(landscape) {
         width: 80%;
       }
@@ -145,14 +149,10 @@
 
         @include media(laptop) {
 
-          width: 120px;
+          width: 170px;
 
         }
-        @include media(desktop) {
 
-          width: 160px;
-
-        }
       }
     }
     .active {
@@ -163,11 +163,14 @@
       }
     }
     .caption {
-      @include font-fam-size(1.2em, $main-font-2, bolder, #383838);
-      width: 33%;
+      @include font-fam-size(1.2em, $main-font-2, bolder);
+
       margin: auto 0;
-      padding-left: 1.6em;
+      //padding-left: 1.6em;
       cursor: pointer;
+      @include media(mobile-l) {
+       font-size: 1.3em;
+      }
       @include media(landscape) {
         margin: 10px 0;
         text-align: center;
@@ -176,11 +179,13 @@
         font-size: 1em;
       }
       @include media(tablet) {
+        background-color: transparent;
+        color: #383838;
         font-size: 1em;
         padding: 5px;
         width: 100%;
         text-align: center;
-        margin: .6em 0 0 0;
+        margin: .3em 0 0 0;
       }
       @include media(desktop) {
       font-size: 1.4em;
@@ -214,80 +219,66 @@
   @include media(landscape) {
     margin-bottom: 0;
   }
-
-
-  .about-me-info {
-    padding: 1em;
-    //h3::before {
-    //  display: block;
-    //  content: " ";
-    //  margin-top: -285px;
-    //  height: 285px;
-    //  visibility: hidden;
-    //  pointer-events: none;
-    //}
+}
+.about-me-info {
+  padding: 1em;
+  @include media(tablet) {
+    padding: 0 ;
+  }
+  @include media(laptop) {
+    padding: 0 2em;
+  }
+  h3{
+    @include font-fam-size(2em, $main-font-2, bold, #333333);
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1em;
     @include media(tablet) {
       padding: 0 ;
+
     }
     @include media(laptop) {
-      padding: 0 2em;
-    }
-    h3{
-      @include font-fam-size(2em, $main-font-2, bold, #333333);
-      width: 100%;
       text-align: left;
-      margin-bottom: 1em;
-      @include media(tablet) {
-       padding: 0 ;
+    }
+  }
+  .about-me-info__info{
+    .about-me-info__info--img{
+      width: 50%;
+      float: right;
+      margin: 0 0 .5em .5em;
+      @include media(laptop) {
+        width: 30%;
+      }
+      @include media(desktop) {
+        width: 20%;
+      }
 
+      img{
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    p {
+      @include font-fam-size(1em, Futura, 500, $about-text);
+      text-align: -webkit-left;
+      margin: 0.5em 0;
+      @include media(tablet) {
+        //padding: 1em 0;
+        @include font-fam-size(1.2em, Futura, 400, $about-text);
+        margin: auto;
+        margin-bottom: .5em;
+        width: 100%;
       }
       @include media(laptop) {
-       text-align: left;
+
+        font-size: 1.4em;
+        font-weight: 500;
+        line-height: 36px;
       }
-    }
-    .about-me-info__info{
-      .about-me-info__info--img{
-        width: 40%;
-        float: right;
-        margin: 0 0 .5em .5em;
-        @include media(tablet) {
+      @include media(desktop) {
+        @include font-fam-size(1.4em, Futura, 400, $about-text);
+        //padding: 15px 10px;
 
-
-        }
-        @include media(laptop) {
-          width: 30%;
-        }
-        @include media(desktop) {
-          width: 20%;
-        }
-
-        img{
-          max-width: 100%;
-          height: auto;
-        }
-      }
-      p {
-        @include font-fam-size(1em, Futura, 500, $about-text);
-        text-align: -webkit-left;
-        margin: 0.5em 0;
-        @include media(tablet) {
-          //padding: 1em 0;
-          @include font-fam-size(1.2em, Futura, 400, $about-text);
-          margin: auto;
-
-          width: 100%;
-        }
-        @include media(laptop) {
-          //width: 80%;
-          font-size: 1.4em;
-          font-weight: 600;
-          line-height: 40px;
-        }
-        @include media(desktop) {
-          @include font-fam-size(1.4em, Futura, 400, $about-text);
-          //padding: 15px 10px;
-
-        }
       }
     }
   }
@@ -299,31 +290,53 @@
   }
   @include media(laptop) {
    background-color: #fff;
+    padding: 2em ;
   }
 
   .skills-title__block{
     width: 100%;
-    padding: 0 1em;
-
     @include media(tablet) {
-      margin: 1em;
-    }
 
+    }
     .skills-title__block--title {
       @include font-fam-size(2em, $main-font-2, bold, #333333);
       text-align: left;
-      margin: 1em  0;
+      margin-bottom: 1em ;
       @include media(tablet) {
         padding: 0 ;
         font-size: 2.2em;
-        text-align: center;
+
       }
       @include media(laptop) {
-        padding: 0 1em;
-        text-align: center;
+
+        text-align: left;
       }
     }
   }
+
+}
+.closing-info{
+
+  p{
+    @include font-fam-size(1em, Futura, 500, $about-text);
+    text-align: left;
+    @include media(tablet) {
+      //padding: 1em 0;
+      @include font-fam-size(1.2em, Futura, 400, $about-text);
+
+    }
+    @include media(laptop) {
+      //width: 80%;
+      font-size: 1.4em;
+      font-weight: 600;
+    }
+    @include media(desktop) {
+      @include font-fam-size(1.4em, Futura, 400, $about-text);
+
+
+    }
+  }
+
 
 }
 
@@ -347,29 +360,34 @@
   @include flex-display(flex, column, center, 100%);
 
 
+
   @include media(tablet) {
-    @include flex-display(flex, row, center, 100%);
+    @include flex-display(flex, column, center, 100%);
   }
+
 
 
   .skills__col {
     @include flex-display(flex, column, space-around, 100%, center);
-
+    margin: 1em 0;
 
       h2{
         @include font-fam-size(1.4em, Futura, 200, $about-text);
         width: 100%;
         margin: .5rem 0;
         text-align: left;
-        padding: 0em 1em;
+
 
         @include media(tablet) {
-          @include font-fam-size(1.3em, Futura, 400, $about-text);
-          text-align: center;
+          @include font-fam-size(1.3em, Futura, 600, $about-text);
+          text-align: left;
+        }
+        @include media(laptop) {
+          font-size: 1.4em;
         }
       }
     .skills__col--svg {
-      padding: 2em  2em;
+      padding: 1em;
       @include media(laptop) {
         padding: 2em  2em;
       }
@@ -379,12 +397,12 @@
       }
 
       svg {
-
+        margin:1em;
         max-width: 45px;
         max-height: 45px;
 
         @include media(tablet) {
-          padding: 2em;
+
           max-width: 60px;
           max-height: 60px;
         }
@@ -396,29 +414,7 @@
       @include flex-display(flex, row, space-evenly, 100%);
 
       flex-wrap: wrap;
-      @include media(tablet) {
-        //width: 70%;
-        svg {
-          //width: 60px;
-          //height: 60px;
-          //margin:  .3em;
-          padding: .3em 0.4em;
-        }
-      }
-      //@include media(laptop) {
-      //  svg {
-      //    width: 80px;
-      //    height: 80px;
-      //    margin: .9em .3em;
-      //  }
-      //}
-      //@include media(desktop) {
-      //  svg {
-      //    width: 80px;
-      //    height: 80px;
-      //    margin: 1.3em 0.7em;
-      //  }
-      //}
+
     }
   }
   .logo-skill {
@@ -456,33 +452,11 @@
 
 
 
-.closing-info{
-  padding: 1em;
-  p{
-    @include font-fam-size(1em, Futura, 500, $about-text);
-    @include media(tablet) {
-      //padding: 1em 0;
-      @include font-fam-size(1.2em, Futura, 400, $about-text);
 
-    }
-    @include media(laptop) {
-      //width: 80%;
-      font-size: 1.4em;
-      font-weight: 600;
-    }
-    @include media(desktop) {
-      @include font-fam-size(1.4em, Futura, 400, $about-text);
-
-
-    }
-  }
-
-
-}
 
 .contact {
   @include flex-display(flex, column, space-around, 100%, center);
-  // padding :10px;
+   padding :1em 0;
   @include media(laptop) {
     //opacity: 0;
   }
@@ -497,7 +471,7 @@
     }
   }
   .number-email {
-    @include flex-display(flex, row, space-around, 100%, center);
+    @include flex-display(flex, column, space-around, 100%, center);
 
     @include media(tablet) {
       justify-content: space-between;

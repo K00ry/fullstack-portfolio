@@ -47,27 +47,34 @@ class Skills extends Component {
                 onExit={this.onExitViewport}
             >
                 <section id="section-4" className={` container skills panel third ${AnimeClass}`}>
-                    <Element name="skills" className="skills-main-area container">
+                    <Element name="skills" className="skills-main-area ">
                         <div className="skills-title__block">
-                            <h1 className="skills-title__block--title">MY SKILLS</h1>
+                            <h3 className="skills-title__block--title">MY SKILLS</h3>
                         </div>
-                        <div className="skills-main">
+                        <div className="closing-info">
+                            <p>I love the challenge of learning new tech everyday, and that is more than enough reason to love tech, especially web development.</p>
+                        </div>
+                        {/*<div className="about-me-info">*/}
+                        {/*    <h3 className="skills-title__block--title">MY SKILLS</h3>*/}
 
-                            <div className="skills"
-                                // data-scroll="toggle(.scaleDownIn, .scaleDownOut)"
-                            >
+                        {/*    <div className="about-me-info__info">*/}
+                        {/*        <p>I love the challenge of learning new tech everyday, and that is more than enough reason to love tech, especially web development.</p>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
+
+
+                        <div className="skills-main">
+                            <div className="skills">
                                 <div className="skills__col ">
                                     <h2>Front-end</h2>
                                     <div className="skills__col--svg fe">
                                         <ReactL/>
                                         <Redux/>
-
                                         <Html/>
                                         <Css/>
                                         <Sass/>
                                         <Js/>
                                         <Jquery/>
-                                        {/*<Bootstrap/>*/}
                                     </div>
                                 </div>
                                 <div className="skills__col ">
@@ -79,9 +86,7 @@ class Skills extends Component {
                                         <Es6/>
                                         <Php/>
                                         <Word/>
-
                                     </div>
-
                                 </div>
                                 <div className="skills__col ">
                                     <h2>Dev-ops</h2>
@@ -92,22 +97,15 @@ class Skills extends Component {
                                         <Aws/>
                                         <Heroku/>
                                         <Git/>
-
                                     </div>
-
                                 </div>
                             </div>
-
-                        </div>
-                        <div className="closing-info">
-
-                            <p>I love the challenge of learning new tech everyday, and that is more than enough reason to love tech, especially web development.</p>
                         </div>
                         <div className="contact" data-scroll="toggle(.scaleDownIn, .scaleDownOut)">
                             <h3>Love to hear from you!</h3>
                             <address className="number-email">
                                 <h4><a href="mailto:koory.yellow@gmail.com">koory.yellow@gmail.com</a></h4>
-                                <h4><a href="tel:+1(917)-414-6858">+1 (917)-414-6858</a></h4>
+                                {/*<h4><a href="tel:+1(917)-414-6858">+1 (917)-414-6858</a></h4>*/}
                             </address>
                         </div>
                     </Element>

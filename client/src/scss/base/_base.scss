@@ -58,8 +58,10 @@ body {
   }
 }
 
-.navbar-nav {
-  margin: 0;
+
+.navbar>.container, .navbar>.container-fluid {
+  padding: 0;
+  margin: auto;
 }
 
 
@@ -82,7 +84,7 @@ body {
   }
   @include media(laptop) {
 
-  margin: 0 .5em;
+  margin: 0 ;
     font-size: 2.5em;
   }
   @include media(desktop) {
@@ -95,8 +97,6 @@ body {
 .active-me .nav-li--a {
   color: #e7724b;
   opacity: 1;
-
-
 
 }
 
@@ -136,10 +136,10 @@ body {
   @include media(tablet) {
     display: none;
   }
-  h1 {
+  h3 {
     width: 100%;
     background-color: #000000;
-    @include font-fam-size(2em, $main-font-3, bold, #ebebeb);
+    @include font-fam-size(2em, $main-font, 600, #ebebeb);
     padding: 10px 0;
     margin: 0;
     text-align: center;
@@ -160,7 +160,7 @@ body {
       @include flex-display(flex, row, space-around, 90%, center);
       flex-wrap: wrap;
       @include font-fam-size(0.7em, $main-font-3, bold, #ebebeb);
-      padding: 5px;
+
       @include media(landscape) {
         width: 40%;
         padding: 0.2em;
@@ -200,9 +200,9 @@ body {
     }
   }
   p {
-    @include font-fam-size(1.1em, $main-font-2, 600, #000);
+    @include font-fam-size(1em, $main-font, 600, #000);
     width: 90%;
-    text-align: center;
+    text-align: left;
     //font-size: 0.7em;
     padding: 10px 0 10px 0;
     @include media(landscape) {
@@ -220,7 +220,7 @@ body {
   margin: auto;
   @include media(tablet) {
     //opacity: 0;
-    @include flex-display(flex, column, flex-start, 90%, center);
+    @include flex-display(flex, column, flex-start, 100%, center);
     .img-holder {
       @include flex-display(flex, column, flex-start, 100%, center);
       margin: 10px auto;
@@ -231,6 +231,7 @@ body {
         }
 
         @include media(laptop) {
+          margin: auto;
           width: 85%;
         }
       }
@@ -245,13 +246,16 @@ body {
       }
     }
   }
+
+
   .info-ov {
     @include font-fam-size(1.2em, $main-font-3, 200, #616161);
     margin: 10px 0;
     text-align: center;
     @include media(tablet) {
-      font-size: 1.6em;
+      font-size: 1.2em;
       font-weight: 400;
+      text-align: left;
     }
 
     @include media(laptop) {
@@ -259,17 +263,20 @@ body {
       font-size: 1.4em;
     }
     @include media(desktop) {
-      font-size: 1.6em;
+
       font-weight: 800;
       width: 100%;
     }
   }
   .title-tech-ov {
     @include flex-display(flex, row, space-around, 100%);
-
+    @include media(tablet) {
+      justify-content: space-between;}
     .title-ov {
+
       @include font-fam-size(2em, $main-font-5, bold, #333333);
       @include media(tablet) {
+
         @include font-fam-size(1.4em, $main-font-2, bolder, #333333);
         text-align: left;
         margin: 0px;
@@ -291,9 +298,7 @@ body {
       }
     }
   }
-  @include media(laptop) {
-    width: 80%;
-  }
+
 }
 
 

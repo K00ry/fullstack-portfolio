@@ -9,13 +9,14 @@
 
 .portfolio {
   @include flex-display(flex, column, space-between, 100%, center);
-  padding: 8em 0;
+  padding: 4em 0;
 
 
   @include media(landscape) {
     height: 100vh;
   }
   @include media(tablet) {
+    padding: 8em 0;
     height: auto;
     //margin-top: 3em;
 
@@ -30,7 +31,7 @@
 .about {
   @include flex-display(flex, column, space-between, 100%, center);
 
-  padding: 8em 0;
+  padding: 4em 0;
   @include media(mobile-l) {
     margin-bottom: 4em;
   }
@@ -39,6 +40,7 @@
 
   }
   @include media(tablet) {
+    padding: 8em 0;
     //height: 90vh;
     margin-bottom: 4em;
   }
@@ -60,7 +62,7 @@
 
   //margin-bottom: 1em;
   @include media(mobile-l) {
-    margin-bottom: 4em;
+    margin-bottom: 1em;
   }
   @include media(landscape) {
     height: auto;
