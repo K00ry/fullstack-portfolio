@@ -96,7 +96,7 @@ export const data = [
     github: 'https://github.com/K00ry/react-web-api',
   },
   {
-    name: 'WEB APP',
+    name: 'Web App',
     img: 'img/work/responsive/2.png',
     info:
         'This project was about building a beautiful web application dashboard complete with JavaScript-driven charts and graphs base on a supplied graphic Mock-up. This was a front end project only, that required to create the responsive layout in HTML and CSS with added JavaScript functionality. Flexbox and Sass proved to be invaluable tools.',
@@ -176,6 +176,6 @@ export const worksDataMobile = [
   { id: 4, name: 'Pars Jadval', src: 'img/work/responsive-works/16.png' },
   { id: 6, name: 'YAASSS Music', src: 'img/work/responsive-works/17.png' },
   { id: 3, name: 'React Web API', src: 'img/work/responsive-works/1.png' },
-  { id: 2, name: 'WEB APP', src: 'img/work/responsive-works/2.png' },
+  { id: 2, name: 'Web App', src: 'img/work/responsive-works/2.png' },
   // { id: 5, name: 'Video Player', src: 'img/work/responsive-works/4.png' },
 ];

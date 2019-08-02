@@ -86,10 +86,9 @@ class Portfolio extends Component {
         let isMobile = <WorksMobile
             works={this.state.works}
             openOverlay={this.state.show}
-            closeOverlay={this.handleClose}
-        />;
-        let isDesktop =
+            closeOverlay={this.handleClose}/>;
 
+        let isDesktop =
             <TransitionGroup component="div" className="wrapper">
                 <CSSTransition
                     key={this.state.projectViewIndex}
@@ -97,36 +96,27 @@ class Portfolio extends Component {
                     classNames="page">
                     <WorksDesktop works={this.state.works} />
                 </CSSTransition>
+            </TransitionGroup>;
 
-            </TransitionGroup>
-
-
-
-            ;
         return (
+            <section id="section-2" className={`portfolio panel second container ${AnimeClass2}`}>
             <ScrollTrigger
-                throttleScroll={-100}
+                throttleScroll={-200}
                 onEnter={this.onEnterViewport}
-                onExit={this.onExitViewport}
-            >
+                onExit={this.onExitViewport}>
                 <Element name="portfolio">
 
-            <section id="section-2" className={`portfolio panel second container ${AnimeClass2}`}
-                     // data-scroll="centerHorizontal,toggle(.scaleDownIn, .scaleDownOut),offset(0,250)"
-                     // data-scroll="centerHorizontal,toggle(.fromTopIn, .fromTopOut), offset(0,250)"
-            >
+
             <div id="projects" >
                 <Works data={worksDataMobile}
                        handleClick={this.getArray}
-                       isItActive={this.isItActive}
-                        />
-
-                {this.props.isMobile ? isMobile : isDesktop}
+                       isItActive={this.isItActive}/>
+                       {this.props.isMobile ? isMobile : isDesktop}
             </div>
-            </section>
+
                 </Element>
             </ScrollTrigger>
-
+            </section>
 
         );
     }

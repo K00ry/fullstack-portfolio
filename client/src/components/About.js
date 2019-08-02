@@ -29,14 +29,15 @@ class About extends Component {
 
 
         return (
+            <section id="section-3" className={`container about panel third ${AnimeClass}`}
+                // data-scroll="toggle(.fromTopIn, .fromTopOut)"
+            >
             <ScrollTrigger
                 throttleScroll={-100}
                 onEnter={this.onEnterViewport}
                 onExit={this.onExitViewport}
             >
-            <section id="section-3" className={`container about panel third ${AnimeClass}`}
-                     // data-scroll="toggle(.fromTopIn, .fromTopOut)"
-            >
+
                 <Element name="about" className="about-main "
                      // data-scroll="toggle(.fadeIn, .fadeOut), offset(0,350)"
                 >
@@ -54,10 +55,8 @@ class About extends Component {
                         {/*<p>I am passionate about web technology, producing music, and being creative. I love learning new skills and sharing what I have learned because I believe the best way to master your skills is to share them with others. </p>*/}
                     </div>
                 </Element>
-            </section>
-
-
             </ScrollTrigger>
+            </section>
 
         );
     }

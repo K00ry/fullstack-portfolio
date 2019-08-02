@@ -9,20 +9,23 @@
 
 .portfolio {
   @include flex-display(flex, column, space-between, 100%, center);
-  padding: 4em 0;
+  margin: 2em 0;
+  padding: 2em 0;
 
 
   @include media(landscape) {
     height: 100vh;
   }
   @include media(tablet) {
-    padding: 8em 0;
+    margin: 4em auto;
+    padding: 4em 0;
     height: auto;
     //margin-top: 3em;
 
   }
   @include media(laptop) {
-    margin-bottom: 5em;
+    margin: 2em auto;
+    padding: 4em 0;
     height: auto;
   }
 

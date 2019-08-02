@@ -249,7 +249,7 @@ body {
 
 
   .info-ov {
-    @include font-fam-size(1.2em, $main-font-3, 200, #616161);
+    @include font-fam-size(1.2em, Futura, 200, #616161);
     margin: 10px 0;
     text-align: center;
     @include media(tablet) {

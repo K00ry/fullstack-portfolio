@@ -41,12 +41,13 @@ class Skills extends Component {
         this.state.visible === true ? AnimeClass = "scaleDownIn" : AnimeClass ="scaleDownOut";
 
         return (
+            <section id="section-4" className={` container skills panel third ${AnimeClass}`}>
             <ScrollTrigger
                 throttleScroll={-100}
                 onEnter={this.onEnterViewport}
                 onExit={this.onExitViewport}
             >
-                <section id="section-4" className={` container skills panel third ${AnimeClass}`}>
+
                     <Element name="skills" className="skills-main-area ">
                         <div className="skills-title__block">
                             <h3 className="skills-title__block--title">MY SKILLS</h3>
@@ -54,15 +55,6 @@ class Skills extends Component {
                         <div className="closing-info">
                             <p>I love the challenge of learning new tech everyday, and that is more than enough reason to love tech, especially web development.</p>
                         </div>
-                        {/*<div className="about-me-info">*/}
-                        {/*    <h3 className="skills-title__block--title">MY SKILLS</h3>*/}
-
-                        {/*    <div className="about-me-info__info">*/}
-                        {/*        <p>I love the challenge of learning new tech everyday, and that is more than enough reason to love tech, especially web development.</p>*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
-
-
                         <div className="skills-main">
                             <div className="skills">
                                 <div className="skills__col ">
@@ -109,8 +101,8 @@ class Skills extends Component {
                             </address>
                         </div>
                     </Element>
-                </section>
             </ScrollTrigger>
+            </section>
         );
     }
 }

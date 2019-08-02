@@ -400,11 +400,20 @@
         margin:1em;
         max-width: 45px;
         max-height: 45px;
+        @include media(mobile-l) {
+          max-width: 55px;
+          max-height: 55px;
+
+        }
 
         @include media(tablet) {
 
           max-width: 60px;
           max-height: 60px;
+        }
+        @include media(laptop) {
+          max-width: 80px;
+          max-height: 80px;
         }
       }
 
