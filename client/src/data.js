@@ -26,7 +26,7 @@ export const data = [
     name: 'Studyum.io',
     img: 'img/work/responsive/15.png',
     info:
-      "Studyum.io is E-learning Platform based on block-chain technology, I'm responsible for entire FullStack structure, From developing UI to user Registration. its a React App in front and uses Wordpress as headless CMS on back-end for ease of use and content management.",
+      "Studyum.io is E-learning Platform based on block-chain technology, I'm responsible for entire FullStack structure, From developing UI to user Registration. I took the jam-stack approach and it keeps growing. Currently, It uses React App in front and Express on the back-end and it uses Wordpress as headless CMS for content management.",
     tech: [
       <ReactL/>,
       <Es6/>,
@@ -41,6 +41,27 @@ export const data = [
     ],
     demo: 'https://studyum.io',
     github: 'https://github.com/K00ry/studyum',
+  },
+  {
+    name: 'Karate City',
+    img: 'img/work/responsive/18.png',
+    info:
+        "Karate City is a charitable non-profit organization, dedicated to improving the well-being of New Yorkers through art and sport of karate. This project is Wordpress powered, I'm responsible for Fullstack development and custom features such as template design, UI/UX, Paypal payment system and drastic improvement of SEO.",
+    tech: [
+      <Word/>,
+      <Php/>,
+      <Js/>,
+      <Jquery/>,
+      <Css/>,
+      <Sass/>,
+
+
+
+
+
+    ],
+    demo: 'https://www.karatecity.org/',
+    github: 'https://github.com/K00ry',
   },
 
   {
@@ -95,24 +116,24 @@ export const data = [
     demo: 'https://k00ry.github.io/react-web-api/',
     github: 'https://github.com/K00ry/react-web-api',
   },
-  {
-    name: 'Web App',
-    img: 'img/work/responsive/2.png',
-    info:
-        'This project was about building a beautiful web application dashboard complete with JavaScript-driven charts and graphs base on a supplied graphic Mock-up. This was a front end project only, that required to create the responsive layout in HTML and CSS with added JavaScript functionality. Flexbox and Sass proved to be invaluable tools.',
-    tech: [
-
-      <Html/>,
-      <Css/>,
-      <Sass/>,
-      <Jquery/>,
-      <Js/>,
-      <Git/>,
-
-    ],
-    demo: 'https://k00ry.github.io/web_app_dashboard_v2/',
-    github: 'https://github.com/K00ry/web_app_dashboard_v2',
-  },
+  // {
+  //   name: 'Web App',
+  //   img: 'img/work/responsive/2.png',
+  //   info:
+  //       'This project was about building a beautiful web application dashboard complete with JavaScript-driven charts and graphs base on a supplied graphic Mock-up. This was a front end project only, that required to create the responsive layout in HTML and CSS with added JavaScript functionality. Flexbox and Sass proved to be invaluable tools.',
+  //   tech: [
+  //
+  //     <Html/>,
+  //     <Css/>,
+  //     <Sass/>,
+  //     <Jquery/>,
+  //     <Js/>,
+  //     <Git/>,
+  //
+  //   ],
+  //   demo: 'https://k00ry.github.io/web_app_dashboard_v2/',
+  //   github: 'https://github.com/K00ry/web_app_dashboard_v2',
+  // },
   // {
   //   name: 'Interactive Player',
   //   img: 'img/work/responsive/4.png',
@@ -173,9 +194,10 @@ export const skills_svg = [
 
 export const worksDataMobile = [
   { id: 1, name: 'Studyum.io', src: 'img/work/responsive-works/15.png' },
+  { id: 2, name: 'Karate City', src: 'img/work/responsive-works/18.png' },
   { id: 4, name: 'Pars Jadval', src: 'img/work/responsive-works/16.png' },
   { id: 6, name: 'YAASSS Music', src: 'img/work/responsive-works/17.png' },
   { id: 3, name: 'React Web API', src: 'img/work/responsive-works/1.png' },
-  { id: 2, name: 'Web App', src: 'img/work/responsive-works/2.png' },
-  // { id: 5, name: 'Video Player', src: 'img/work/responsive-works/4.png' },
+  // { id: 2, name: 'Web App', src: 'img/work/responsive-works/2.png' },
+
 ];
