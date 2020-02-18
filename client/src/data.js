@@ -87,7 +87,7 @@ export const data = [
   },
 
   {
-    name: 'Skylarking Silver Smith',
+    name: 'Skylarking',
     img: 'img/work/responsive/21.png',
     info:
         'Pars Jadval is concrete precast company. Technologies i used were MongoDB Atlas, React, Express, Node.js and created a cms like functionality for admin user to update new products on the website, also it uses i18next (for Localization).',
@@ -112,6 +112,7 @@ export const data = [
       <Redux/>,
       <Sass/>,
       <Bootstrap/>,
+      <Strapi/>,
       <Mongo/>,
       <Heroku/>,
       <Aws/>,
