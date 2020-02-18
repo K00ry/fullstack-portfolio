@@ -26,7 +26,7 @@ class Portfolio extends Component {
       visible2: false,
             works: {
                 name: 'Studyum.io',
-                img: 'img/work/responsive/15.png',
+                img: 'img/work/responsive/19.png',
                 info:
                     "Studyum.io (Initial Design) is E-learning Platform based on block-chain technology, I'm responsible for entire FullStack structure, From developing UI to user Registration. I took the jam-stack approach and it keeps growing. Currently, It uses React App in front and Express on the back-end and it uses Wordpress as headless CMS for content management.",
                 tech: [

@@ -20,7 +20,9 @@ export default class Works extends Component {
             onClick={() => this.props.handleClick(index)}>
             <img src={process.env.PUBLIC_URL + work.src} alt={work.name} />
           </div>
-          <span className="caption click-button">{work.name}</span>
+            <div className="caption-wrapper">
+                <span className="caption click-button">{work.name}</span>
+            </div>
         </li>
       );
     });

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as Sass } from './svg/sass.svg';
+import { ReactComponent as Handle } from './svg/handlebars.svg';
 import { ReactComponent as Express } from './svg/express.svg';
 import { ReactComponent as Mongo } from './svg/mongodb.svg';
 import { ReactComponent as Bootstrap } from './svg/bootstrap.svg';
@@ -19,12 +20,33 @@ import { ReactComponent as Heroku } from './svg/heroku.svg';
 import { ReactComponent as Redux } from './svg/redux.svg';
 import { ReactComponent as Ec2 } from './svg/ec2.svg';
 import { ReactComponent as Aws } from './svg/aws.svg';
+import { ReactComponent as Strapi } from './svg/strapi.svg';
 
 
 export const data = [
   {
+    name: 'Studyum.io.2.0',
+    img: 'img/work/responsive/19.png',
+    info:
+        "Studyum.io.2.0 is the second version of the Web platform entirely redesigned and developed , I'm responsible for entire FullStack structure, From developing UI to user Registration. I took the jam-stack approach and it keeps growing. Currently, It uses React and Express Wordpress as headless CMS for content management.",
+    tech: [
+      <ReactL/>,
+      <Es6/>,
+      <Node/>,
+      <Express/>,
+      <Css/>,
+      <Sass/>,
+      <Word/>,
+      <Git/>,
+
+
+    ],
+    demo: 'https://studyum.io/',
+    github: 'https://github.com/STUDYUM/Studyum.io-2.0',
+  },
+  {
     name: 'Studyum.io',
-    img: 'img/work/responsive/15.png',
+    img: 'img/work/responsive/22.png',
     info:
       "Studyum.io is E-learning Platform based on block-chain technology, I'm responsible for entire FullStack structure, From developing UI to user Registration. I took the jam-stack approach and it keeps growing. Currently, It uses React App in front and Express on the back-end and it uses Wordpress as headless CMS for content management.",
     tech: [
@@ -44,7 +66,7 @@ export const data = [
   },
   {
     name: 'Karate City',
-    img: 'img/work/responsive/18.png',
+    img: 'img/work/responsive/20.png',
     info:
         "Karate City is a charitable non-profit organization, dedicated to improving the well-being of New Yorkers through art and sport of karate. This project is Wordpress powered, I'm responsible for Fullstack development and custom features such as template design, UI/UX, Paypal payment system and drastic improvement of SEO.",
     tech: [
@@ -65,21 +87,19 @@ export const data = [
   },
 
   {
-    name: 'Pars Jadval',
-    img: 'img/work/responsive/16.png',
+    name: 'Skylarking Silver Smith',
+    img: 'img/work/responsive/21.png',
     info:
         'Pars Jadval is concrete precast company. Technologies i used were MongoDB Atlas, React, Express, Node.js and created a cms like functionality for admin user to update new products on the website, also it uses i18next (for Localization).',
     tech: [
-      <ReactL/>,
-      <Node/>,
-      <Mongo/>,
-      <Express/>,
-      <Es6/>,
+      <Handle/>,
+      <Html/>,
+      <Css/>,
       <Sass/>,
-      <Bootstrap/>,
+      <Es6/>,
       <Git/>,
     ],
-    demo: 'http://www.parsjadval.co/',
+    demo: 'https://skylarkingsilver.com/',
     github: 'https://github.com/K00ry/pars-fullstack',
   },
   {
@@ -116,6 +136,24 @@ export const data = [
     demo: 'https://k00ry.github.io/react-web-api/',
     github: 'https://github.com/K00ry/react-web-api',
   },
+  // {
+  //   name: 'Pars Jadval',
+  //   img: 'img/work/responsive/16.png',
+  //   info:
+  //       'Pars Jadval is concrete precast company. Technologies i used were MongoDB Atlas, React, Express, Node.js and created a cms like functionality for admin user to update new products on the website, also it uses i18next (for Localization).',
+  //   tech: [
+  //     <ReactL/>,
+  //     <Node/>,
+  //     <Mongo/>,
+  //     <Express/>,
+  //     <Es6/>,
+  //     <Sass/>,
+  //     <Bootstrap/>,
+  //     <Git/>,
+  //   ],
+  //   demo: 'http://www.parsjadval.co/',
+  //   github: 'https://github.com/K00ry/pars-fullstack',
+  // },
   // {
   //   name: 'Web App',
   //   img: 'img/work/responsive/2.png',
@@ -188,14 +226,17 @@ export const skills_svg = [
   <Ec2/>,
   <Aws/>,
   <Heroku/>,
-  <Git/>
+  <Git/>,
+  <Handle/>,
+  <Strapi/>
 ];
 
 
 export const worksDataMobile = [
-  { id: 1, name: 'Studyum.io', src: 'img/work/responsive-works/15.png' },
-  { id: 2, name: 'Karate City', src: 'img/work/responsive-works/18.png' },
-  { id: 4, name: 'Pars Jadval', src: 'img/work/responsive-works/16.png' },
+  { id: 4, name: 'Studyum.io.2.0', src: 'img/work/responsive-works/19.png' },
+  { id: 1, name: 'Studyum.io', src: 'img/work/responsive-works/22.png' },
+  { id: 2, name: 'Karate City', src: 'img/work/responsive-works/20.png' },
+  { id: 4, name: 'Skylarking', src: 'img/work/responsive-works/21.png' },
   { id: 6, name: 'YAASSS Music', src: 'img/work/responsive-works/17.png' },
   { id: 3, name: 'React Web API', src: 'img/work/responsive-works/1.png' },
   // { id: 2, name: 'Web App', src: 'img/work/responsive-works/2.png' },
