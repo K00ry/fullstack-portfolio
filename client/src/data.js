@@ -108,6 +108,7 @@ export const data = [
       <Redux/>,
       <Sass/>,
       <Bootstrap/>,
+      <Strapi/>,
       <Mongo/>,
       <Heroku/>,
       <Aws/>,
