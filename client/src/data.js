@@ -76,21 +76,17 @@ export const data = [
       <Jquery/>,
       <Css/>,
       <Sass/>,
-
-
-
-
-
     ],
     demo: 'https://www.karatecity.org/',
     github: 'https://github.com/K00ry',
   },
 
   {
-    name: 'Skylarking Silver Smith',
+    name: 'Skylarking',
     img: 'img/work/responsive/21.png',
     info:
-        'Pars Jadval is concrete precast company. Technologies i used were MongoDB Atlas, React, Express, Node.js and created a cms like functionality for admin user to update new products on the website, also it uses i18next (for Localization).',
+        // 'Pars Jadval is concrete precast company. Technologies i used were MongoDB Atlas, React, Express, Node.js and created a cms like functionality for admin user to update new products on the website, also it uses i18next (for Localization).',
+    'Skylarking silversmith is a project I developed as an e-commerce platform to showcase and sale of beautiful silversmith products. it\'s developed on Bigcommerce Stencil and it was heavy on Handlebar.js and complex UI development.',
     tech: [
       <Handle/>,
       <Html/>,

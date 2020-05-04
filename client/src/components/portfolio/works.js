@@ -8,8 +8,6 @@ export default class Works extends Component {
   render() {
     let works = this.props.data.map((work, index) => {
 
-
-
       return (
         <li
           key={index}

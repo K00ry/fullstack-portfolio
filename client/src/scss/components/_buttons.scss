@@ -11,67 +11,7 @@
 }
 
 
-.links {
-  margin-bottom: 40px;
-  @include flex-display(flex, row, space-between, 80%, center);
-  @include media(tablet) {
-    width: 30%;
-    margin: 0px;
-  }
-  @include media(laptop) {
-    width: 23%;
-  }
-  @include media(landscape) {
-    justify-content: space-evenly;
-    padding-bottom: 0.4em;
-    width: 50%;
-    margin: 0.4em;
-  }
 
-  li {
-    text-align: center;
-    width: 50%;
-    background-color: #333333;
-
-    @include font-fam-size(1em, $main-font-2, 200, #ffffff);
-
-    transition: all 0.7s;
-    margin: 8px 8px;
-
-    @include media(landscape) {
-      //font-size: 1.6em;
-      box-shadow: none;
-      margin: 0;
-      width: 25%;
-    }
-
-    @include media(tablet) {
-      width: 50%;
-      font-size: 1.2em;
-    }
-    @include media(laptop) {
-      margin: 0 8px;
-      width: 40%;
-      font-size: 1.1em;
-    }
-
-    &:hover {
-      background-color: hsl(15, 76%, 70%);
-      box-shadow: 0 0 0 3px hsl(15, 76%, 70%), 0 0 0 5px hsl(30, 76%, 70%);
-      text-decoration: none;
-    }
-    a {
-      text-decoration: none;
-      color: #fff;
-      display: block;
-      padding: 10px;
-      @include media(landscape) {
-        padding: 5px;
-        font-size: 0.6em;
-      }
-    }
-  }
-}
 .modal-header {
   width: 100%;
   padding: 0 10px;

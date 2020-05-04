@@ -8,7 +8,7 @@ const Skills = props => {
     </li>
   );
 
-  return <ul className="tech-ov">{skills}</ul>;
+  return <ul className="info-section__tech-ov">{skills}</ul>;
 };
 
 

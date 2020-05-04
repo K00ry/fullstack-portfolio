@@ -4,27 +4,29 @@ import Skills from './skills';
 
 const WorksDesktop = props => {
   return (
-    <div id="overlay-desktop">
-      <div className="img-holder">
+    <div className="overlay-desktop">
+      <div className="overlay-desktop__img-holder">
         <img
           className="img-ov img-fluid"
           src={props.works.img}
           alt="responsive devices  on larger devices"
         />
       </div>
-      <div className="title-tech-ov">
-        <h3 className="title-ov">{props.works.name}</h3>
-        <ul className="links">
-          <li className="git-ov">
-            <a href={props.works.github}>GITHUB</a>
-          </li>
-          <li className="demo-ov">
-            <a href={props.works.demo}>DEMO</a>
-          </li>
-        </ul>
-        <Skills works={props.works} />
+      <div className="overlay-desktop__info">
+          <div className="info-section">
+            <h3 className="info-section__title">{props.works.name}</h3>
+            <ul className="links">
+              <li className="git-ov">
+                <a href={props.works.github}>GITHUB</a>
+              </li>
+              <li className="demo-ov">
+                <a href={props.works.demo}>DEMO</a>
+              </li>
+            </ul>
+            <Skills works={props.works} />
+          </div>
+          <p className="info-ov">{props.works.info}</p>
       </div>
-      <p className="info-ov">{props.works.info}</p>
     </div>
   );
 };

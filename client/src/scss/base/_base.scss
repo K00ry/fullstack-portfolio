@@ -48,11 +48,7 @@ body {
 }
 
 .nav {
-  //background-color: #000;
   @include flex-display(flex, row, space-around, 100%, center);
-  @include media(tablet) {
-    //padding-top: 10px;
-  }
   @include media(laptop) {
     justify-content: flex-start;
   }
@@ -72,10 +68,6 @@ body {
   &:hover{
     color: #fff;
     text-decoration: none;
-    @include media(laptop) {
-
-    }
-
   }
   @include font-fam-size(1.3em, $main-font-2, bold, #fff);
   opacity: 0.8;
@@ -83,21 +75,17 @@ body {
     font-size: 2em;
   }
   @include media(laptop) {
-
   margin: 0 ;
     font-size: 2.5em;
   }
   @include media(desktop) {
-
     font-weight: bolder;
-    //margin: 10px;
   }
 }
 
 .active-me .nav-li--a {
   color: #e7724b;
   opacity: 1;
-
 }
 
 .active-intro {
@@ -160,7 +148,6 @@ body {
       @include flex-display(flex, row, space-around, 90%, center);
       flex-wrap: wrap;
       @include font-fam-size(0.7em, $main-font-3, bold, #ebebeb);
-
       @include media(landscape) {
         width: 40%;
         padding: 0.2em;
@@ -174,7 +161,6 @@ body {
     width: 15%;
   }
   svg{
-    //margin:0 1em;
     width: 30px;
     height: 30px;
     @include media(laptop) {
@@ -203,80 +189,108 @@ body {
     @include font-fam-size(1em, $main-font, 600, #000);
     width: 90%;
     text-align: left;
-    //font-size: 0.7em;
     padding: 10px 0 10px 0;
     @include media(landscape) {
       width: 100%;
       padding: 0.4em;
       margin: 0;
-
       font-size: 0.9em;
     }
   }
 }
+//shared links class for  both mob and desk styles
+.links {
+  margin-bottom: 40px;
+  @include flex-display(flex, row, space-between, 80%, center);
+  @include media(tablet) {
+    width: 30%;
+    margin: 0px;
+  }
+  @include media(laptop) {
+    width: 23%;
+  }
+  @include media(landscape) {
+    justify-content: space-evenly;
+    padding-bottom: 0.4em;
+    width: 50%;
+    margin: 0.4em;
+  }
+  li {
+    text-align: center;
+    width: 50%;
+    background-color: #333333;
+    @include font-fam-size(1em, $main-font-2, 200, #ffffff);
+    transition: all 0.7s;
+    margin: 8px 8px;
 
-#overlay-desktop {
+    @include media(landscape) {
+      box-shadow: none;
+      margin: 0;
+      width: 25%;
+    }
+    @include media(tablet) {
+      width: 50%;
+      font-size: 1.2em;
+    }
+    @include media(laptop) {
+      margin: 0 8px;
+      width: 40%;
+      font-size: 1.1em;
+    }
+
+    &:hover {
+      background-color: hsl(15, 76%, 70%);
+      box-shadow: 0 0 0 3px hsl(15, 76%, 70%), 0 0 0 5px hsl(30, 76%, 70%);
+      text-decoration: none;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      padding: 10px;
+      @include media(landscape) {
+        padding: 5px;
+        font-size: 0.6em;
+      }
+    }
+  }
+}
+//////
+
+.overlay-desktop {
   display: none;
   margin: auto;
   @include media(tablet) {
-    //opacity: 0;
-    @include flex-display(flex, column, flex-start, 100%, center);
-    .img-holder {
-      @include flex-display(flex, column, flex-start, 100%, center);
+    //@include flex-display(flex, column, flex-start, 100%, center);
+    display: block;
+    &__img-holder {
+      //@include flex-display(flex, column, flex-start, 100%, center);
+      display: block;
       margin: 10px auto;
       img {
-        width: 100%;
+        width: 70%;
         @include media(tablet) {
-          width: 100%;
+          width: 70%;
         }
-
         @include media(laptop) {
-          margin: auto;
-          width: 85%;
+          //margin: auto;
+          //width: 85%;
         }
       }
     }
-    img {
-      width: 100%;
-      @include media(laptop) {
-        max-width: 100%;
-      }
-      @include media(desktop) {
-
-      }
-    }
   }
-
-
-  .info-ov {
+&__info{
+  @include flex-display(flex, column, space-between, 100%);
+  .info-section {
     @include font-fam-size(1.2em, Futura, 200, #616161);
-    margin: 10px 0;
-    text-align: center;
     @include media(tablet) {
-      font-size: 1.2em;
-      font-weight: 400;
-      text-align: left;
+      @include flex-display(flex, row, space-between, 100%);
+
     }
 
-    @include media(laptop) {
-      width: 100%;
-      font-size: 1.4em;
-    }
-    @include media(desktop) {
-
-      font-weight: 800;
-      width: 100%;
-    }
-  }
-  .title-tech-ov {
-    @include flex-display(flex, row, space-around, 100%);
-    @include media(tablet) {
-      justify-content: space-between;}
-    .title-ov {
-
+    &__title {
       @include font-fam-size(2em, $main-font-5, bold, #333333);
       @include media(tablet) {
-
         @include font-fam-size(1.4em, $main-font-2, bolder, #333333);
         text-align: left;
         margin: 0px;
@@ -290,15 +304,32 @@ body {
         @include font-fam-size(2.5em, $main-font-2, bolder, #333333);
       }
     }
-    .tech-ov {
+    &__tech-ov {
       @include flex-display(flex, row, center, 40%, center);
-
       @include media(laptop) {
         width: 50%;
+        }
       }
     }
   }
-
+  .info-ov{
+    @include font-fam-size(1.2em, Futura, 200, #616161);
+    margin: 10px 0;
+    text-align: center;
+    @include media(tablet) {
+      font-size: 1.2em;
+      font-weight: 400;
+      text-align: left;
+    }
+    @include media(laptop) {
+      width: 100%;
+      font-size: 1.4em;
+    }
+    @include media(desktop) {
+      font-weight: 800;
+      width: 100%;
+    }
+  }
 }
 
 
@@ -324,13 +355,9 @@ body {
     width: 100%;
     height: 100%;
   }
-
-
 }
 @media (min-aspect-ratio: 16/9) {
   @include media(tablet) {
-
-
   .backGroundVid__video {
     height: 300%;
     top: -100%;
@@ -348,11 +375,5 @@ body {
 }
 
 @media (max-width: 767px) {
-  //.backGroundVid {
-  //  display: none;
-  //}
-  //
-  //.backGroundVid__video {
-  //  display: none;
-  //}
+
 }
