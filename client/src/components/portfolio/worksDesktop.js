@@ -6,11 +6,13 @@ const WorksDesktop = props => {
   return (
     <div className="overlay-desktop">
       <div className="overlay-desktop__img-holder">
+          <a href={props.works.demo}>
         <img
           className="img-ov img-fluid"
           src={props.works.img}
           alt="responsive devices  on larger devices"
         />
+          </a>
       </div>
       <div className="overlay-desktop__info">
           <div className="info-section">
