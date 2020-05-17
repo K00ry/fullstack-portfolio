@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { worksDataMobile, data } from '../../data';
-
 import Works from './works';
 import WorksDesktop from './worksDesktop';
 import WorksMobile from './worksMobile';
