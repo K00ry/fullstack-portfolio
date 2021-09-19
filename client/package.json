@@ -1,35 +1,61 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "axios": "^0.19.0",
-    "node-sass": "^4.14.0",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.8",
-    "react-dom": "^16.8.6",
-    "react-scripts": "^3.4.1",
-    "react-scroll": "^1.7.11",
-    "react-scroll-trigger": "^0.5.3",
-    "react-scrollspy": "^3.4.0",
-    "react-sizes": "^1.0.4",
-    "react-transition-group": "^4.2.1",
-    "scrolltrigger-classes": "^0.3.6"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "proxy": "http://server:8080",
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "name": "client",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "axios": "^0.21.4",
+        "node-sass": "^6.0.1",
+        "react": "^16.8.6",
+        "react-bootstrap": "^1.6.3",
+        "react-dom": "^16.8.6",
+        "react-scripts": "^4.0.3",
+        "react-scroll": "^1.7.11",
+        "react-scroll-trigger": "^0.5.3",
+        "react-scrollspy": "^3.4.0",
+        "react-sizes": "^1.0.4",
+        "react-transition-group": "^4.2.1",
+        "scrolltrigger-classes": "^0.3.6"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "prettier"
+        ],
+        "plugins": [
+            "prettier"
+        ],
+        "rules": {
+            "default-case": "warn",
+            "no-fallthrough": "warn",
+            "prettier/prettier": [
+                "warn"
+            ]
+        }
+    },
+    "prettier": {
+        "printWidth": 90,
+        "tabWidth": 4,
+        "bracketSpacing": false,
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "jsxSingleQuote": true
+    },
+    "devDependencies": {
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "prettier": "2.0.5"
+    },
+    "proxy": "http://server:8080",
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
 }
